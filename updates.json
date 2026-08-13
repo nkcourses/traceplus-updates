@@ -1,0 +1,21 @@
+{
+  "latest": "1.0.0",
+  "headline": "Trace+ 1.0.0 — find what your project no longer needs.",
+  "url": "https://www.nkcourses.co.uk/trace-plus",
+
+  "_comment": [
+    "THE UPDATE FEED FOR TRACE+. Commit to the ROOT of nkcourses/traceplus-updates as updates.json.",
+    "",
+    "SEPARATE REPO FROM TRACE, ON PURPOSE. Both help pages render their own repo's GitHub Releases",
+    "as the changelog, so one shared repo would interleave Trace and Trace+ releases on both",
+    "products' pages.",
+    "",
+    "DO NOT COMMIT THIS UNTIL TRACE+ ACTUALLY SHIPS. A feed announcing 1.0.0 when there is nothing",
+    "to download is worse than no feed - the panel will offer an update that does not exist.",
+    "Same three fields and the same four rules as Trace's feed; see trace-updates.json.",
+    "",
+    "One extra thing to remember for a PAID product: a version bump here reaches people who have",
+    "not paid for the new build only if the licence covers it. The licence does not expire, so it",
+    "does - but if that ever changes, this feed is where the mistake becomes visible."
+  ]
+}
