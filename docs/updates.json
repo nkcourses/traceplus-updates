@@ -1,0 +1,16 @@
+{
+  "latest": "1.0.0",
+  "released": "2026-08-27",
+  "headline": "A scan that is two and a half times faster, remove the spare copies, and fold the panel down to the list.",
+  "url": "https://www.nkcourses.co.uk/traceplus",
+  "notes": [
+    "Scanning is 2.5x faster on a big project. The walk asked the host ten questions one after another about every clip on every timeline; it asks them all at once now, which on 5,776 clips is nine fewer round trips each.",
+    "Remove spare copies — a clip imported twice is one file and several project items. Trace+ keeps one and removes the rest, and refuses on anything used in a cut or on a subclip with its own in and out points.",
+    "Every row says what it is: VIDEO, AUDIO, STILL, NEST or MULTICAM, in its own colour, and OFFLINE in red. The same filters now work inside a single sequence.",
+    "Tick boxes on every clip row, so selecting a long list no longer means scrolling to the bottom to find Select all.",
+    "Put back is reliable — it used to move some clips and quietly skip others. It now says what it could not move and why.",
+    "Much faster scanning on a big project. One probe was running twice per duplicate on every redraw; a 73-duplicate project was making 146 host calls it did not need.",
+    "Fold it down: the summary block, the filter rows and every section heading in the project view collapse, and the panel says what is still filtering when the chips are hidden.",
+    "The scan report has Copy and Hide buttons of its own, and Copy is in the ☰ menu too."
+  ]
+}
