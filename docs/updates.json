@@ -1,18 +1,9 @@
 {
-  "latest": "1.2.0",
+  "latest": "1.2.1",
   "released": "2026-09-24",
-  "headline": "The panel is quieter: one switch at the top, one number that answers, and the filters behind one button.",
+  "headline": "A beta badge in the header, so you always know which build you are in.",
   "url": "https://nkcourses.github.io/traceplus-updates/#history",
   "notes": [
-    "Active cut or Project, as one switch. Active cut answers about the sequence you have open, and other sequences are one line away",
-    "The answer leads: uses in this cut, or the gigabytes not used, in large type at the top",
-    "The Project view is a checklist now: not used, imported more than once, offline, empty bins. Press a line to see it",
-    "Used and not used are 2 numbers you press, so you can see what is in the cut against what is not",
-    "Every filter lives behind the Filters button, which counts what is on",
-    "Select a bin and Trace+ lists what in it is not in your cut yet",
-    "Build a sequence of the unused parts of a clip, back to back, to scrub through what you never touched",
-    "Files inside a multicam count as used, cameras and synced audio, so Move to _UNUSED leaves them alone",
-    "Next and previous moved up beside the number they step through",
-    "Compare cuts is off for now while the panel is simplified"
+    "The tag beside the Trace+ mark reads BETA"
   ]
 }
