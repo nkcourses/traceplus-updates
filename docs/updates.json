@@ -1,13 +1,12 @@
 {
-  "latest": "1.2.2",
+  "latest": "1.2.3",
   "released": "2026-09-24",
-  "headline": "The marker colours open on hover now, and removing markers says what actually happened.",
+  "headline": "Shift-click removes markers again, and the Project view's buttons all carry a mark.",
   "url": "https://nkcourses.github.io/traceplus-updates/#history",
   "notes": [
-    "Hover the marker flag and the colour bar opens, the same way the clip colour list does",
-    "The bar carries the colours, Default, and Remove Trace+ markers, so every gesture is something you can point at",
-    "Fixed: marker colours and marker removal read the sequence a second way when the first read comes back empty. Both of them read the list back, and only they were failing",
-    "Removing markers now says which wall it hit: nothing on screen, no markers of ours, Premiere would not give up the names, or Premiere accepted the request and left them there",
-    "The scan report has a markers section showing exactly what the last press did, sequence by sequence"
+    "Shift-click the marker flag removes Trace+'s markers, the same as alt-click. Either key does it, and a held key can never add markers by mistake",
+    "Delete empty bins and Put back have icons now, and the tick on All and Clear is drawn rather than typed",
+    "Fixed: the Filters popup drew a Which sequences count heading in the Project view with nothing under it. Those 2 filters belong to the clip view, so the heading only appears when they do",
+    "The search box no longer sits on top of its own magnifying glass"
   ]
 }
