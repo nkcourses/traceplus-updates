@@ -1,12 +1,9 @@
 {
-  "latest": "1.2.3",
-  "released": "2026-09-24",
-  "headline": "Shift-click removes markers again, and the Project view's buttons all carry a mark.",
+  "latest": "1.7.2",
+  "released": "2026-09-26",
+  "headline": "Next cut and Select all are two buttons again.",
   "url": "https://nkcourses.github.io/traceplus-updates/#history",
   "notes": [
-    "Shift-click the marker flag removes Trace+'s markers, the same as alt-click. Either key does it, and a held key can never add markers by mistake",
-    "Delete empty bins and Put back have icons now, and the tick on All and Clear is drawn rather than typed",
-    "Fixed: the Filters popup drew a Which sequences count heading in the Project view with nothing under it. Those 2 filters belong to the clip view, so the heading only appears when they do",
-    "The search box no longer sits on top of its own magnifying glass"
+    "Next cut now has a gap between it and Select all, so the two no longer read as one wide button with two labels"
   ]
 }
