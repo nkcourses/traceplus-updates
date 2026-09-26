@@ -1,9 +1,9 @@
 {
-  "latest": "1.7.2",
+  "latest": "1.7.3",
   "released": "2026-09-26",
-  "headline": "Next cut and Select all are two buttons again.",
+  "headline": "Next cut and Select all, properly apart.",
   "url": "https://nkcourses.github.io/traceplus-updates/#history",
   "notes": [
-    "Next cut now has a gap between it and Select all, so the two no longer read as one wide button with two labels"
+    "Fixed: Next cut still sat flush against Select all on some panels. There is now a clear gap between the two, the same as the gap beside the arrows"
   ]
 }
