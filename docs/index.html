@@ -45,7 +45,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trace+ — Help &amp; Documentation</title>
+<title>Trace+ – Help &amp; Documentation</title>
 <meta name="description" content="User guide for Trace+, a Premiere Pro panel that reads your whole project and tells you what it has stopped needing, what it can’t do without, and how many gigabytes of media on disk nothing is using.">
 <link rel="icon" href="assets/trace-plus-tile.png">
 <link rel="apple-touch-icon" href="assets/trace-plus-tile-512.png">
@@ -55,8 +55,8 @@
      the ON-DARK mark, because every social card sits on a light card and the
      black cut disappears into its own background at thumbnail size. -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Trace+ — help &amp; documentation">
-<meta property="og:description" content="See every clip your project no longer needs — and every clip it can’t do without.">
+<meta property="og:title" content="Trace+ – help &amp; documentation">
+<meta property="og:description" content="See every clip your project no longer needs – and every clip it can’t do without.">
 <meta property="og:image" content="assets/trace-plus-tile-512.png">
 <meta name="twitter:card" content="summary">
 <style>
@@ -256,6 +256,7 @@
   <a href="#timeline">Timeline clips</a>
   <a href="#unusedparts">The parts you never used</a>
   <a href="#sequence">One sequence</a>
+  <a href="#bin">A whole bin</a>
   <a href="#project">The whole project</a>
 
   <h4>Reading the project</h4>
@@ -266,7 +267,6 @@
   <a href="#search">Searching by name</a>
 
   <a href="#activeonly">Only the cut you have open</a>
-  <a href="#compare">Compare two cuts</a>
 
   <h4>Acting on it</h4>
   <a href="#labels">Colour labels</a>
@@ -302,7 +302,7 @@
     <svg class="mark" viewBox="0 0 290 192" aria-hidden="true"><rect x="0" y="0" width="190" height="52" rx="14" fill="#1fc8ec"/><rect x="0" y="70" width="290" height="52" rx="14" fill="#9d54e8"/><rect x="0" y="140" width="232" height="52" rx="14" fill="#16dd7d"/></svg>
     <h1>Trace+</h1>
   </div>
-  <p class="lede">See every clip your project no longer needs — and every clip it can’t do without.</p>
+  <p class="lede">See every clip your project no longer needs – and every clip it can’t do without.</p>
   <p class="lede-sub">And how many gigabytes of media on disk nothing is using any more.</p>
 
   <div class="cards">
@@ -313,35 +313,35 @@
     <a class="card" href="#quick-start"><b>Quick start</b><span>Find what your project has stopped
       needing, and what it costs you to keep.</span></a>
     <a class="card" href="#archive"><b>File it away</b><span>Move what you have stopped needing
-      into <code>_UNUSED</code> — and put it back the day you need it.</span></a>
+      into <code>_UNUSED</code> – and put it back the day you need it.</span></a>
   </div>
 
   <figure>
-    <img src="assets/plus-unused.gif" alt="Trace+ reading every bin in a project and reporting the clips that are on no timeline at all, with two flagged offline and one as a graphic with no media file.">
-    <figcaption>Nothing selected. Trace+ reads every bin — not just the timelines — and says what
-      the project has stopped using.</figcaption>
+    <img src="assets/plus-unused.gif" alt="Trace+ switched from Active cut to Project, showing 61.9 GB used and 141 GB not used, with Imported twice and Empty bins beside them, then the not used side pressed and the unused files listed.">
+    <figcaption>Press <strong>Project</strong>. Trace+ reads every bin – not just the timelines – and
+      says how much of the project your cuts never use.</figcaption>
   </figure>
 
   <h2 id="overview">Overview</h2>
   <p>Trace answers <em>where is this one clip used?</em> Trace+ answers the question you cannot ask
   one clip at a time: <strong>what is in this project, and what of it is doing nothing?</strong></p>
   <p>It walks every bin, matches what it finds against every timeline, and gives you three views of
-  the same index — one clip, one sequence, or the whole project. Then it lets you act on the answer:
+  the same index – one clip, one sequence, or the whole project. Then it lets you act on the answer:
   label it, mark it, file it away, and put it back.</p>
 
   <div class="note">
     <p><b>Trace+ has everything Trace has.</b> Nothing you learned in the free panel has moved,
-    changed name, or been taken away — same gestures, same menu, same list. Trace+ adds views and
+    changed name, or been taken away – same gestures, same menu, same list. Trace+ adds views and
     actions on top. If a habit works in Trace it works here.</p>
   </div>
 
   <p><strong>It never touches a file on your disk.</strong> Nothing Trace+ does can cost you footage.
-  Most of what it does <em>moves</em> things — into a bin, and back out again — and Premiere undoes
+  Most of what it does <em>moves</em> things – into a bin, and back out again – and Premiere undoes
   that with <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>-Z like any other edit.</p>
 
   <p>Two things it can remove from the <em>project</em>, each behind a button that names the count
   before you press it: <strong>empty bins</strong> it has proved have nothing anywhere inside them,
-  and <strong>spare imports</strong> — an item pointing at a file another item already points at,
+  and <strong>spare imports</strong> – an item pointing at a file another item already points at,
   over exactly the same in and out points. Anything covering a different part of the file is a
   <strong>subclip</strong>, not a copy; Trace+ refuses those and says so on screen. Every media file
   keeps at least one item, always.</p>
@@ -369,7 +369,7 @@
   </ul>
   <div class="note warn">
     <p><b>Trace+ asks for full filesystem access, and Trace does not.</b> That is so it can read
-    <em>how big</em> your media files are — the number under the unused list. It reads file sizes,
+    <em>how big</em> your media files are – the number under the unused list. It reads file sizes,
     never file contents. See <a href="#privacy">Privacy</a>.</p>
   </div>
 
@@ -393,15 +393,15 @@
   </div>
 
   <h2 id="licence">Your licence</h2>
-  <p>Open <strong>☰ &gt; Help and licence…</strong> and paste the key from your order email, then press
+  <p>Open <strong>☰ &gt; Help &amp; licence…</strong> and paste the key from your order email, then press
   <strong>Activate</strong>. The panel unlocks immediately.</p>
   <figure>
-    <img src="assets/plus-licence.png" alt="The About / Licence window in Trace+, showing the version, the licence state with the email and seat count, the key field, and the Activate and Remove buttons.">
-    <figcaption><strong>☰ &gt; Help and licence….</strong> The state line tells you which seat you are
+    <img src="assets/plus-licence.png" alt="The Help &amp; licence window in Trace+, showing the version, the licence state with the email and seat count, the key field, and the Activate and Remove buttons.">
+    <figcaption><strong>☰ &gt; Help &amp; licence…</strong> The state line tells you which seat you are
       on. <strong>Remove</strong> frees it again for another machine.</figcaption>
   </figure>
   <ul>
-    <li><strong>Seats.</strong> One key covers more than one machine — the card tells you how many
+    <li><strong>Seats.</strong> One key covers more than one machine – the card tells you how many
       you are using and how many you have.</li>
     <li><strong>Moving to another machine.</strong> Press <strong>Remove</strong> on the old one
       first. That frees the seat straight away; you do not need to email anybody.</li>
@@ -417,7 +417,7 @@
 
   <h2 id="quick-start">Quick start</h2>
   <ol>
-    <li>Open a project and click <strong>Project</strong> — the clapper-board button on the toolbar.
+    <li>Open a project and click <strong>Project</strong> – the clapper-board button on the toolbar.
       Do not select anything.</li>
     <li>Wait for the walk. Trace+ reads every bin and every timeline, and says how far it has got.</li>
     <li>You are looking at every media file in the project. The switch above the list flips between
@@ -432,19 +432,21 @@
   selected decides which one you get.</strong></p>
   <table>
     <tr><th>Select this</th><th>Get this</th></tr>
-    <tr><td>A clip in the Project panel</td><td><a href="#clip">One clip</a> — every place it is
+    <tr><td>A clip in the Project panel</td><td><a href="#clip">One clip</a> – every place it is
       used</td></tr>
-    <tr><td>A sequence, or just have one open</td><td><a href="#sequence">One sequence</a> — every
+    <tr><td>A sequence, or just have one open</td><td><a href="#sequence">One sequence</a> – every
       clip inside it, ranked by how often it is used</td></tr>
     <tr><td>A clip <strong>on the timeline</strong>, with the timeline tile pressed</td>
-      <td><a href="#timeline">The same answer</a> — every place that source is used, without going
+      <td><a href="#timeline">The same answer</a> – every place that source is used, without going
       back to the Project panel</td></tr>
+    <tr><td>A bin in the Project panel</td><td><a href="#bin">A whole bin</a> – what is in the cut you
+      have open and what is not, and a stringout of either</td></tr>
     <tr><td>Nothing, then press <strong>Project</strong></td><td><a href="#project">The whole
-      project</a> — every media file, used and unused</td></tr>
+      project</a> – every media file, used and unused</td></tr>
   </table>
   <p><strong>A selection always wins.</strong> Click a clip while you are in the project view and
   the panel follows you to that clip. With the <a href="#timeline">timeline tile</a> pressed, a clip
-  you click <em>in a sequence</em> counts as a selection too — whichever you touched last is the one
+  you click <em>in a sequence</em> counts as a selection too – whichever you touched last is the one
   on screen. Project view is sticky rather than automatic: press the button
   to go there, and it stays until you select something.</p>
   <div class="note">
@@ -462,31 +464,34 @@
   from the first six minutes".</p>
   <figure>
     <img src="assets/plus-coverage.gif" alt="The source coverage bar filling in as each use of a long interview clip is drawn onto the strip.">
-    <figcaption>The <strong>source coverage bar</strong> — which parts of the source are on a
+    <figcaption>The <strong>source coverage bar</strong> – which parts of the source are on a
       timeline, and the longest run that never made it.</figcaption>
   </figure>
   <p>Above the list, <strong>All · Repeat · OTHER · Unused</strong> narrows what you are looking
-  at. The first three are about the <em>uses</em> — see <a href="#repeats">Repeats and sections</a>.
+  at. The first three are about the <em>uses</em> – see <a href="#repeats">Repeats and sections</a>.
   The fourth is the other side of the coin.</p>
 
   <h3 id="unusedparts">The parts you never used</h3>
-  <p><strong>Unused</strong> lists the spans of the source that nothing points at — the gaps
+  <p><strong>Unused</strong> lists the spans of the source that nothing points at – the gaps
   <em>between</em> the uses. Where each one starts, how long it is, and what share of the file it is.
   On a forty-minute interview that is usually most of it.</p>
   <figure>
-    <img src="assets/plus-gaps.gif" alt="A long interview clip in Trace+, the Unused tab pressed, and five untouched spans of the source listed with their lengths.">
-    <figcaption>Not where you used it — <strong>what is left</strong>.</figcaption>
+    <img src="assets/plus-spans.gif" alt="An interview clip in Trace+ showing 2 uses in this cut and 11s never used, the never used pane pressed, then Build a sequence of 3 spans pressed and a new sequence opening with the 3 unused parts laid end to end.">
+    <figcaption>Not where you used it – <strong>what is left</strong>, and one press to cut with it.</figcaption>
   </figure>
+  <p><strong>Build a sequence of N spans</strong> turns the list into something you can scrub: it
+  makes a subclip of each unused part and lays them end to end in a new sequence, named
+  <em>Unused spans · </em> and the clip's name, then opens it. It never touches the file.</p>
   <ul>
     <li><strong>Click a row</strong> to open that clip in the Source Monitor <strong>marked to that
-      span</strong> — the clip's in and out points are set to the unused stretch, ready to drag
+      span</strong> – the clip's in and out points are set to the unused stretch, ready to drag
       straight into a timeline. No modifier, and nothing to remember.</li>
     <li>That <strong>writes to the project</strong>: it is one undo step, Premiere's
       <kbd>Cmd</kbd>+<kbd>Z</kbd> takes it back, and the status line says which span was marked.</li>
   </ul>
   <div class="note">
     <p><b>Lengths, not timecodes, and that is deliberate.</b> A gap is measured against the
-    <em>source</em>, and Premiere does not tell a panel the frame rate of a source file — only of the
+    <em>source</em>, and Premiere does not tell a panel the frame rate of a source file – only of the
     sequences it has been cut into, which need not match. A timecode here would be invented, so
     Trace+ gives you the one number it can stand behind.</p>
   </div>
@@ -498,38 +503,38 @@
 
   <h2 id="timeline">Clips you select in the timeline</h2>
   <p><b>The question this answers is the one you ask mid-edit.</b> You are watching a cut, something
-  looks familiar, and you want to know where else it is — without stopping, finding the clip in the
+  looks familiar, and you want to know where else it is – without stopping, finding the clip in the
   Project panel, and clicking it there. Press <strong>Timeline</strong> and the sequence asks for you.</p>
   <p>By default Trace+ answers about whatever you click in the <strong>Project panel</strong>. Press
-  <strong>Timeline</strong> in the toolbar — the button beside <strong>Project</strong> — and it answers about
+  <strong>Timeline</strong> in the toolbar – the button beside <strong>Project</strong> – and it answers about
   clips you click <strong>in a sequence</strong> as well. Not instead: both keep working, and whichever you
   touched last is the one on screen.</p>
   <p>It is off until you press it, it remembers the setting, and pressing it reads whatever is
   selected on the timeline right away rather than waiting for your next click.</p>
   <figure>
     <img src="assets/plus-timeline.gif" alt="The Timeline button in Trace+'s toolbar being pressed until it lights, then a clip clicked on the V1 track of a sequence, and the panel switching from the clip that was selected in the Project panel to the one selected in the timeline.">
-    <figcaption>Press Timeline once, then click in the sequence. The Project panel keeps working —
+    <figcaption>Press Timeline once, then click in the sequence. The Project panel keeps working –
       <strong>whichever you touched last wins</strong>.</figcaption>
   </figure>
   <ul>
     <li><strong>Select one clip in any sequence</strong> and the panel shows every other place that source
-      is used — including the sequences you are not looking at.</li>
+      is used – including the sequences you are not looking at.</li>
     <li><strong>Selecting several clips of the same file</strong> is the same question, so the panel answers
-      it. <strong>Selecting a mixture</strong> is not a question it can answer — it shows one clip's uses —
+      it. <strong>Selecting a mixture</strong> is not a question it can answer – it shows one clip's uses –
       so it keeps showing what you had.</li>
     <li><strong>Clicking away</strong> on the timeline does not blank the panel.</li>
   </ul>
   <div class="note">
     <p><b>It stands down in the project view.</b> It goes grey while you are looking at
     <a href="#project">the whole project</a>, because a timeline clip is a question about one clip and
-    that view is about all of them — acting on it would have to throw you out of the view you chose.
+    that view is about all of them – acting on it would have to throw you out of the view you chose.
     Press <strong>Back</strong> first and it lights again.</p>
     <p>On a narrow dock the word goes and the icon stays, the same way <strong>Filters</strong> behaves.</p>
   </div>
   <div class="note">
     <p><b>On a very large project there can be a pause.</b> Trace+ answers from its index, and on a
     project with fourteen thousand clips on timelines that index takes a few seconds to rebuild after
-    an edit. Click a clip during one of those and nothing happens for a moment — then it appears. The
+    an edit. Click a clip during one of those and nothing happens for a moment – then it appears. The
     panel keeps asking until the index is ready rather than dropping the question, so there is
     nothing to press twice.</p>
   </div>
@@ -537,7 +542,7 @@
   what makes it a panel with nothing to set up.</p>
 
   <h2 id="sequence">One sequence</h2>
-  <p>Select a sequence — or simply have one open with nothing else selected — and Trace+ lists every
+  <p>Select a sequence – or simply have one open with nothing else selected – and Trace+ lists every
   clip inside it, <strong>ranked by how many times it is used</strong>, with the total screen time
   beside each one.</p>
   <figure>
@@ -554,11 +559,35 @@
       a time. There used to be a One clip · Multiple clips button here; the gesture replaced it, and
       the panel says so in the status line the first time you open a second row.</li>
   </ul>
-  <p>This is the view for "what am I leaning on too hard?" — the shot you have cut back to eleven
+  <p>This is the view for "what am I leaning on too hard?" – the shot you have cut back to eleven
   times without noticing sits at the top of the list.</p>
 
+  <!-- 🔴 ADDED 29 Sep 2026, 1.8.38 – the bin view shipped across 1.8.3x with nothing written
+       about it here. -->
+  <h2 id="bin">A whole bin</h2>
+  <p>Select a <strong>bin</strong> in the Project panel and Trace+ splits it against the cut you have
+  open: <strong>in this cut</strong> and <strong>not in this cut</strong>, as 2 big counts. A bin
+  with folders inside lists the folders with their counts; press one to open it.</p>
+  <figure>
+    <img src="assets/plus-stringout.gif" alt="The B-roll bin selected, showing 4 in this cut and 6 not in this cut, Build a stringout of 6 clips pressed and a new sequence filling clip by clip, then Select all, a Teal colour label and a marker added across every clip.">
+    <figcaption>Every shot the cut never used, laid out to scrub – then selected, coloured and
+      marked.</figcaption>
+  </figure>
+  <ul>
+    <li><strong>Build a stringout</strong> lays every clip on the list you have open end to end in a
+      new sequence and opens it. From <em>not in this cut</em> it is everything left to try; from
+      <em>in this cut</em> it is the selects the cut already uses. The sequence is named for the list
+      and the bin it came from, and it is one step you can undo.</li>
+    <li>The new sequence is a cut like any other, so the <a href="#sequence">sequence view</a> takes
+      over: <strong>Select all</strong> selects every clip in it, the colour chip labels them all, and
+      the marker button puts a marker across every use. See <a href="#labels">Colour labels</a> and
+      <a href="#markers">Markers</a>.</li>
+    <li>The Media filter (All, Video, Audio, Stills) works in a bin too, and can be pinned there
+      like anywhere else.</li>
+  </ul>
+
   <h2 id="project">The whole project</h2>
-  <p>Press <strong>Project</strong> — the clapper-board button — with nothing selected. Trace+ walks
+  <p>Press <strong>Project</strong> – the clapper-board button – with nothing selected. Trace+ walks
   every bin, measures every media file, and gives you the lot.</p>
   <p>The switch above the list flips between <strong>Used</strong> and <strong>Not used</strong>.
   Used is the default because it is the larger and less alarming half.</p>
@@ -571,7 +600,7 @@
       side; the count in the label always matches the rows you will get.</td></tr>
     <tr><td><strong>Offline</strong></td><td>Appears only when something is offline. See
       <a href="#offline">below</a>.</td></tr>
-    <tr><td><strong>✓ All</strong></td><td>In each section's header — ticks every row in that
+    <tr><td><strong>✓ All</strong></td><td>In each section's header – ticks every row in that
       section. Press it again to clear them.</td></tr>
   </table>
   <p>Every section has its own <strong>✓ All</strong> because the sections answer different
@@ -580,7 +609,7 @@
   <h2 id="unused">What counts as unused</h2>
   <p>This is the number the whole panel rests on, so it is worth knowing exactly what it means.</p>
   <p><strong>A media <em>file</em> is unused when no project item pointing at it is on any
-  timeline.</strong> Not per import — per file. Import the same interview twice and it is one row; if
+  timeline.</strong> Not per import – per file. Import the same interview twice and it is one row; if
   either copy is cut into a sequence, the file is used.</p>
   <p>Three sections under the list exist to keep that number honest, and they are the difference
   between a tool you can act on and a list you have to double-check:</p>
@@ -589,7 +618,7 @@
     <tr><td><strong>Not placed, but their media is used</strong></td><td>A master clip sitting on no
       timeline while a <em>subclip</em> of it is cut into three sequences. Deleting the master would
       break them. These are never counted as unused.</td></tr>
-    <tr><td><strong>Used only in archived sequences</strong></td><td>Used — but only inside a
+    <tr><td><strong>Used only in archived sequences</strong></td><td>Used – but only inside a
       sequence whose name says it is old. True either way, and which one you care about depends on
       whether you trust the naming.</td></tr>
     <tr><td><strong>Sequences</strong></td><td>Left out entirely. A finished film is not nested
@@ -602,13 +631,13 @@
   </div>
 
   <h2 id="weight">How much disk space it would free</h2>
-  <p>Under the list, Trace+ reports what the unused media comes to <strong>on disk</strong> — and
+  <p>Under the list, Trace+ reports what the unused media comes to <strong>on disk</strong> – and
   draws the whole project as two bars: how much of the weight is dead, and what the weight actually
   is (video, audio, stills, other).</p>
   <p><strong>It is bytes, not file counts.</strong> Sixty unused stills and one unused ProRes master
   are the same row count and a thousand times apart on disk.</p>
   <figure>
-    <img src="assets/plus-weight.gif" alt="Two bars filling in under the unused list: how much of the project's weight is used, not used and unmeasured, and what that weight is made of — video, audio and stills.">
+    <img src="assets/plus-weight.gif" alt="Two bars filling in under the unused list: how much of the project's weight is used, not used and unmeasured, and what that weight is made of – video, audio and stills.">
     <figcaption><strong>128 GB on no timeline.</strong> Two bars, because they are two different
       questions: how much of the weight is dead, and what the weight actually <em>is</em>.</figcaption>
   </figure>
@@ -617,7 +646,7 @@
     silently ignores what it could not read is a bar that lies about the total. If a whole volume is
     offline the panel draws the count bars instead and tells you which it is drawing.</p>
   </div>
-  <p>Measuring is the slowest thing the panel does — one filesystem call per distinct media file — so
+  <p>Measuring is the slowest thing the panel does – one filesystem call per distinct media file – so
   the list is drawn first and the weight lands a moment later. The sizes are then cached and only
   re-measured when the set of media files actually changes. The <strong>☰ &gt; Re-scan project</strong> item
   always re-measures: it is the "I do not believe you" button, and a cache is what it exists to
@@ -626,9 +655,9 @@
   <h2 id="duplicates">Duplicates and empty bins</h2>
   <p>Two more questions come free off the same walk, and both are end-of-job tidying:</p>
   <ul>
-    <li><strong>Imported more than once</strong> — the same file sitting in the project two or three
+    <li><strong>Imported more than once</strong> – the same file sitting in the project two or three
       times over. Usually harmless, occasionally the reason two editors' versions disagree.</li>
-    <li><strong>Empty bins</strong> — and "empty" means the whole subtree, not just childless. A bin
+    <li><strong>Empty bins</strong> – and "empty" means the whole subtree, not just childless. A bin
       holding four bins that are themselves empty is the emptiest thing in the project, and it is
       reported as one row rather than making you delete the leaves four times over.</li>
   </ul>
@@ -638,25 +667,26 @@
   least one item, and it is one undo step for the lot.</p>
 
   <div class="note">
-    <p><b>It refuses subclips, and says so on screen.</b> Premiere has no way to tell a subclip from a
-    second import — from the outside they are two items pointing at one file. What they do <em>not</em>
-    share is their in and out points, so Trace+ only removes an item whose extent matches exactly the
-    one it is keeping. Anything covering a different part of the file is a subclip, and the line under
-    the button names how many were left alone and why.</p>
+    <p><b>It leaves other parts of a file alone, and says so on screen.</b> Premiere has no way to
+    tell a subclip from a second import – from the outside they are two items pointing at one file.
+    What they do <em>not</em> share is their in and out points, so Trace+ only removes an item whose
+    extent matches exactly the one it is keeping. Anything covering a different part of the file is
+    labelled an <strong>other part</strong>, and the line under the button names how many were left
+    alone and why.</p>
     <p><b>It never removes anything that is used.</b> An item on a timeline is never a candidate,
-    whatever its extent — and the keeper is a used item if the group has one, otherwise the shortest
+    whatever its extent – and the keeper is a used item if the group has one, otherwise the shortest
     name, which is almost always the original master rather than "…copy 2".</p>
     <p><b>The count is re-measured the moment you press it</b>, not when it was drawn. If you trimmed
     a subclip in between, it drops out of the plan and the status line says how many actually went.</p>
   </div>
 
   <p><strong>What about Premiere's own Consolidate Duplicates?</strong> It is a different operation:
-  it repoints <em>sequence</em> clips at one master. If your duplicates are unused imports — the
-  usual case after an ingest runs twice — it has nothing to repoint. It also gives you no preview, no
+  it repoints <em>sequence</em> clips at one master. If your duplicates are unused imports – the
+  usual case after an ingest runs twice – it has nothing to repoint. It also gives you no preview, no
   count and no explanation when it declines.</p>
   <p><strong>Empty bins can be removed.</strong> Tick the ones you want gone and press
   <strong>Delete empty bins</strong>. It is one undo step for the lot, and there is nothing inside
-  them to lose — that is what "empty" means here.</p>
+  them to lose – that is what "empty" means here.</p>
   <div class="note">
     <p><b>"Empty" is the whole subtree, not just childless.</b> A bin holding four bins that are
     themselves empty is the emptiest thing in the project, so it is one row rather than making you
@@ -666,7 +696,7 @@
   </div>
 
   <h2 id="offline">Offline media</h2>
-  <p class="lead">The <strong>Offline</strong> chip is not a relink tool, and that is deliberate —
+  <p class="lead">The <strong>Offline</strong> chip is not a relink tool, and that is deliberate –
   Premiere's own <strong>Link Media</strong> dialog does that job properly and a worse copy of a
   built-in belongs in no product.</p>
 
@@ -682,7 +712,7 @@
   <div class="note">
     <p><b>It is Premiere's answer, not a filesystem check.</b> The chip reads
     <code>isOffline()</code>. A file the panel could not <em>measure</em> is a different question with
-    different causes — a permissions wall, an unmounted volume — and conflating the two would put
+    different causes – a permissions wall, an unmounted volume – and conflating the two would put
     working media in a list titled "broken".</p>
   </div>
 
@@ -690,7 +720,7 @@
   <p>Trace+ both <strong>shows</strong> the label Premiere has given each item and lets you
   <strong>set</strong> one.</p>
   <h3>Reading them</h3>
-  <p>Every row carries a coloured bar beside its name — the same label the Project panel draws in its
+  <p>Every row carries a coloured bar beside its name – the same label the Project panel draws in its
   own colour column. It is a readout, not a control: pressing it does nothing, because the swatch bar
   is the one way to change a label. Turn it off with <strong>☰ &gt; Settings</strong> &gt;
   <strong>Clip labels</strong>.</p>
@@ -704,8 +734,8 @@
   </figure>
   <div class="note warn">
     <p><b>It labels the master clip, and whether the timeline follows is a project setting.</b>
-    There is no API to set the label of a clip already cut into a sequence — re-verified against
-    Premiere's unreleased 26.5 beta — so Trace+ labels the master in the Project panel. Premiere
+    There is no API to set the label of a clip already cut into a sequence – re-verified against
+    Premiere's unreleased 26.5 beta – so Trace+ labels the master in the Project panel. Premiere
     copies a label into an instance when the clip is edited in and then leaves it alone, so
     changing the master afterwards normally does <em>not</em> recolour the timeline.</p>
     <p>One switch changes that, and it is Premiere's, not the panel's:</p>
@@ -713,7 +743,7 @@
     color for all instances”.</b> Tick it and every instance follows its master, so the swatches
     here colour the timeline as well. Leave it clear and they colour the Project panel only.</p>
   </div>
-  <p><strong>Where to look:</strong> the Project panel's <em>Label</em> column first — that is the
+  <p><strong>Where to look:</strong> the Project panel's <em>Label</em> column first – that is the
   one place the change always shows. Not the panel's own list, which redraws from the label you
   just set and so can only ever agree with itself. Trace+ reads the label back from Premiere after
   setting it, and says so in the status line if the host kept something else.</p>
@@ -727,28 +757,33 @@
 
   <div class="note">
     <p><b>It cannot hide everything.</b> If the open sequence does not use this clip the filter
-    stands aside rather than emptying the list — a filter that leaves you with nothing reads as a
+    stands aside rather than emptying the list – a filter that leaves you with nothing reads as a
     broken panel. It also only appears when it would actually do something: the open sequence uses
     this clip <em>and</em> there are uses elsewhere to hide.</p>
-    <p>It is a <b>clip view</b> control — it narrows one clip's list of uses. All media and the
+    <p>It is a <b>clip view</b> control – it narrows one clip's list of uses. All media and the
     sequence view are already about one project and one cut, so it is not offered there.</p>
   </div>
 
   <h2 id="rules">Filtering the list</h2>
-  <p class="lead">Ticking files one at a time is fine for five and useless for five hundred — which
+  <p class="lead">Ticking files one at a time is fine for five and useless for five hundred – which
   is the size of project this panel exists for. So you narrow the list first, then act on what is
   left.</p>
+
+  <p><strong>You choose which filters sit on the panel.</strong> In <strong>Filters</strong>, the pin
+  beside a filter puts it above the list; every filter you have pinned is listed under
+  <strong>On the panel</strong>, where its struck-through pin turns yellow when you point at it and
+  one press unpins it.</p>
 
   <p>Above the list, each chip carrying its own live count:</p>
 
   <ul>
-    <li><strong>Used</strong> / <strong>Not used</strong> — the two halves of the question</li>
-    <li><strong>All · Video · Audio · Stills</strong> — by media type, read from the file itself</li>
-    <li><strong>Used 2+</strong> — cut in twice or more, counting instances rather than sequences.
+    <li><strong>Used</strong> / <strong>Not used</strong> – the two halves of the question</li>
+    <li><strong>All · Video · Audio · Stills</strong> – by media type, read from the file itself</li>
+    <li><strong>Used 2+</strong> – cut in twice or more, counting instances rather than sequences.
         It cycles: 2+ → 3+ → 5+ → off, skipping any step that would empty the list</li>
-    <li><strong>Offline</strong> — the list a relink session starts from</li>
-    <li><strong>Duplicates</strong> — files more than one project item points at</li>
-    <li><strong>Archived only</strong> — used, but only in cuts you have archived</li>
+    <li><strong>Offline</strong> – the list a relink session starts from</li>
+    <li><strong>Duplicates</strong> – files more than one project item points at</li>
+    <li><strong>Archived only</strong> – used, but only in cuts you have archived</li>
   </ul>
 
   <figure>
@@ -758,7 +793,7 @@
   </figure>
 
   <p><strong>They compose.</strong> Every one of them narrows what is already on screen rather than
-  replacing it, so "offline stills that are also duplicated" is one press each — no menu of
+  replacing it, so "offline stills that are also duplicated" is one press each – no menu of
   combinations, and no combination somebody forgot to write.</p>
 
   <p>The four media-type chips work <strong>in the open sequence too</strong>, not just across the
@@ -769,24 +804,24 @@
     <p><b>A chip that would match nothing is not there at all.</b> A permanently visible "Offline 0"
     is a filter that can only ever empty the list, and a control that does nothing is a control
     people press once and stop trusting.</p>
-    <p><b>A filter you have forgotten is on is how a clip goes missing</b> — so a chip that is
+    <p><b>A filter you have forgotten is on is how a clip goes missing</b> – so a chip that is
     hiding rows is filled in the accent, and the summary above the list says how many it is hiding.</p>
   </div>
 
   <h3 id="search">Searching by name</h3>
   <p>Above the chips there is a search box. Type part of a name and the list narrows to the rows
-  that carry it — in <strong>All media</strong> and inside a <strong>sequence</strong> both.
+  that carry it – in <strong>All media</strong> and inside a <strong>sequence</strong> both.
   Matching is case-insensitive and it is a plain "contains", not a fuzzy guess: type
   <code>interview</code> and you get every name with <code>interview</code> in it, and nothing
   else.</p>
 
-  <p><strong>It searches the clip's name</strong> — the name on the row, and the names of the
+  <p><strong>It searches the clip's name</strong> – the name on the row, and the names of the
   project items behind it. That second half matters more than it sounds: a row in All media is one
   media <em>file</em>, while Premiere's own Project panel lists project <em>items</em>, so the name
   you read there and type in here can be <code>CLIP_2 copy.mov</code> while the row says
   <code>CLIP_2.mov</code>. Both find it.</p>
 
-  <p>Nothing else is matched — not the bin, not the sequence. What you can see is what is being
+  <p>Nothing else is matched – not the bin, not the sequence. What you can see is what is being
   matched, so a row that appears is always a row you can explain.</p>
 
   <p>The search sits <em>on top of</em> the chips rather than replacing them, like every other
@@ -795,39 +830,37 @@
 
   <div class="note">
     <p><b>Select all, Move to <code>_UNUSED</code> and the colour swatches act on the
-    matches.</b> That is the point of it — search <code>interview</code>, press Select all, colour
-    twelve clips in one go — but it is also the thing to be careful about. The count beside the box
+    matches.</b> That is the point of it – search <code>interview</code>, press Select all, colour
+    twelve clips in one go – but it is also the thing to be careful about. The count beside the box
     says how many the term is showing <em>before</em> you press anything, and it names what it is
     counting: files in All media, clips in a cut.</p>
   </div>
 
   <p>Clear it with the <strong>✕</strong>, or press <strong>Escape</strong> while the box has
-  focus. The term survives a re-scan and a change of view, the same way the chips do — "show me the
+  focus. The term survives a re-scan and a change of view, the same way the chips do – "show me the
   interview rushes" is a question about the footage, not about which list happens to be up.</p>
 
   <div class="note">
-    <p>The <strong>funnel</strong> folds the search box away with the chips — it is one of the
+    <p>The <strong>funnel</strong> folds the search box away with the chips – it is one of the
     controls that narrows the list, so it goes when they go. If a search is still running when you
-    fold, the dim line that replaces them says so: <em>Filtered · searching “interview” — press to
+    fold, the dim line that replaces them says so: <em>Filtered · searching “interview” – press to
     show the filters</em>. Pressing that line brings the box and the chips back together.</p>
   </div>
 
   <h3>Folding the chips away</h3>
   <p>Most of the time you are reading the list rather than narrowing it, and the chips are two rows
-  of screen you are not using. The <strong>funnel</strong> beside the view's name folds them away —
+  of screen you are not using. The <strong>funnel</strong> beside the view's name folds them away –
   in a sequence and in All media both.</p>
   <p>It is a separate control from the fold beside it, which hides the summary block, because
   keeping the chips while folding the summary is a real thing to want on a long list of unused
   media.</p>
   <div class="note">
     <p><b>If a filter is still on, one dim line says which.</b> Folding a chip row while one of its
-    chips is switched on would otherwise leave a list that is short for a reason you cannot see —
+    chips is switched on would otherwise leave a list that is short for a reason you cannot see –
     and pressing that line brings the chips straight back.</p>
     <p><b>Used / Not used does not fold.</b> It is the switch between the two lists rather than a
     filter on one of them, and a panel that folded away its own primary control would be a list
     nobody could change.</p>
-    <p><b>It will not fold while you are comparing cuts.</b> <em>Stop comparing</em> lives on one of
-    those rows and is the only way out of a compared list.</p>
   </div>
 
   <h2 id="hiding">Hiding rows you have dealt with</h2>
@@ -842,7 +875,7 @@
   pressing it again.</p>
 
   <figure>
-    <img src="assets/plus-hide.gif" alt="Three rows ticked in Trace+'s unused list, then the eye at the end of one of them pressed — all three leave the list and a strip appears in their place reading 3 rows hidden, with an Unhide all button.">
+    <img src="assets/plus-hide.gif" alt="Three rows ticked in Trace+'s unused list, then the eye at the end of one of them pressed – all three leave the list and a strip appears in their place reading 3 rows hidden, with an Unhide all button.">
     <figcaption><strong>Tick, then one press.</strong> The strip that appears in their place is the
       point: the list is never quietly short.</figcaption>
   </figure>
@@ -871,10 +904,10 @@
   <p>And every use of a clip that is used more than once carries a badge saying which kind it is:</p>
 
   <ul>
-    <li><strong>REPEAT</strong> — this footage, again. The same stretch of the source, laid down a
+    <li><strong>REPEAT</strong> – this footage, again. The same stretch of the source, laid down a
         second time.</li>
-    <li><strong>OTHER</strong> — the same clip, a <strong>different part</strong> of it.</li>
-    <li><em>neither</em> — this clip is used once.</li>
+    <li><strong>OTHER</strong> – the same clip, a <strong>different part</strong> of it.</li>
+    <li><em>neither</em> – this clip is used once.</li>
   </ul>
 
   <p>Seven uses of one heartbeat effect might be seven different hits, or the same one-and-a-half
@@ -883,7 +916,7 @@
   <h3>Seeing one half of them</h3>
   <p>Above the list there is one more control: press it and it cycles <strong>Show repeats</strong>
   → <strong>Show other parts</strong> → <strong>Show all</strong>, each carrying the number you
-  would get. It appears only when there are both kinds to separate — a clip whose uses are all
+  would get. It appears only when there are both kinds to separate – a clip whose uses are all
   repeats has nothing to narrow to.</p>
 
   <figure>
@@ -908,12 +941,28 @@
     it.</p>
   </div>
 
+  <!-- 🔴 ADDED 29 Sep 2026 with the Retimed chip. -->
+  <h3 id="retimed">Retimed uses</h3>
+  <p>A use that does not play at normal speed says so on its row: an amber tag with the speed
+  (<strong>50%</strong>, <strong>200%</strong>), or <strong>REV</strong> when it plays backwards.
+  <strong>Retimed</strong>, beside Repeat and Other,
+  narrows the list to just those uses, with its count on the chip.</p>
+  <ul>
+    <li>It is the check before a delivery or a re-conform: every slowed, sped-up or reversed use of
+      a clip, across every cut, in one list.</li>
+    <li>In the <strong>Active cut</strong> view each clip's row carries the tag too: the speed when
+      every use of it plays at that speed, or <strong>1 at 50%</strong> when only some do. The
+      <strong>Retimed</strong> filter there lists only those clips.</li>
+    <li>The speed Trace+ reads is the clip's own Speed/Duration setting. Speed keyframed with time
+      remapping is not shown yet.</li>
+  </ul>
+
   <h2 id="rowlabels">What each row is</h2>
   <p class="lead">A filename cannot tell you what a thing is. <code>A001_C014_0429R8</code> is a
   video, a still, or a whole nested sequence depending on a project nobody can see from the name.</p>
 
   <p>So every row carries a label: <strong>VIDEO</strong>, <strong>AUDIO</strong>,
-  <strong>STILL</strong>, <strong>NEST</strong> — in the same colours the disk-space breakdown uses,
+  <strong>STILL</strong>, <strong>NEST</strong> – in the same colours the disk-space breakdown uses,
   so cyan means video in both places rather than in one.</p>
 
   <p>Two of them are warnings rather than descriptions. <strong>MULTICAM</strong> and
@@ -922,70 +971,25 @@
   the row rather than reporting a number that is too low and letting you archive the interview
   audio.</p>
 
-  <p>The <strong>tag button</strong> in the toolbar turns them off — the luggage tag, next to the
+  <p>The <strong>tag button</strong> in the toolbar turns them off – the luggage tag, next to the
   filter funnel. On a narrow dock the tag and the filename compete for the same forty characters,
   which is why it is a switch and not a decision; it sits on the toolbar rather than in Settings
   because it is a thing you flick, not a thing you set once. Like the folds beside it, it
   <strong>lights while it is hiding something</strong>.</p>
 
   <figure>
-    <img src="assets/plus-tags.gif" alt="A list of media in Trace+ with a coloured VIDEO, AUDIO or STILL tag on every row, then the tag button in the toolbar pressed — the tags go, the names and counts stay, and the button lights.">
+    <img src="assets/plus-tags.gif" alt="A list of media in Trace+ with a coloured VIDEO, AUDIO or STILL tag on every row, then the tag button in the toolbar pressed – the tags go, the names and counts stay, and the button lights.">
     <figcaption><strong>What a filename cannot tell you.</strong> One button turns the whole column
       off; it lights while they are hidden, so a missing tag is never a mystery.</figcaption>
   </figure>
 
-  <h2 id="compare">Compare two cuts</h2>
-  <p class="lead">What is in v04 that is not in v03? Premiere cannot answer that, and neither can
-  anything else on the market. The only honest way to know today is to scrub both.</p>
-
-  <p>Open a sequence, then press <strong>Compare cuts</strong>. Trace+ lists your other
-  sequences; pick one and you get three lists:</p>
-
-  <ul>
-    <li><strong>Only in &lt;this cut&gt;</strong> — clips you have added</li>
-    <li><strong>Only in &lt;the other cut&gt;</strong> — clips that are gone</li>
-    <li><strong>In both, cut differently</strong> — the same clip, a different number of times,
-      shown as <code>3 → 1</code></li>
-  </ul>
-
-  <figure>
-    <img src="assets/plus-compare.gif" alt="Compare cuts pressed in Trace+, another sequence picked from the list, and three lists appearing: only in this cut, only in the other cut, and in both with counts like 3 to 1.">
-    <figcaption>Pick the cut to compare against. <strong>The sections are named after your
-      sequences</strong>, because which one is newer is your knowledge, not the panel's.</figcaption>
-  </figure>
-
-  <p><strong>The sections are named after your sequences, never "added" and "removed".</strong>
-  Which cut is newer is your knowledge, not the panel's — v03 could easily be the one you have
-  open.</p>
-
-  <div class="note">
-    <p><b>It compares clips, not edit points.</b> "In both" means the clip appears in both cuts, not
-    that it is cut the same way. A clip used three times in v03 and once in v04 is in both, and the
-    counts say what happened. Comparing edit points instead would answer a far less useful question:
-    every ripple would read as a change to everything after it.</p>
-  </div>
-
-  <p><strong>Every row goes somewhere.</strong> Click one to jump to that clip on the timeline —
-  in the cut it actually lives in. <kbd>Shift</kbd>-click opens it in the Source Monitor. Tick a row
-  to select every use of that clip, or press <strong>Select all</strong> under a section to take the
-  lot.</p>
-
-  <div class="note">
-    <p><b>Selecting is per section.</b> Premiere cannot hold a selection spanning two sequences, and
-    the two "only in" lists are about different cuts — so one button across the whole comparison
-    would silently drop half of what it claimed.</p>
-    <p>Because a row click makes a real Premiere selection, moving a clip between cuts is
-    <kbd>Cmd</kbd>-C in one sequence and <kbd>Cmd</kbd>-V in the other. Trace+ does the finding;
-    Premiere does the copying.</p>
-  </div>
-
   <h2 id="markers">Markers</h2>
-  <p>The <strong>marker button</strong> in the title row — the flag shape — drops a marker over
+  <p>The <strong>marker button</strong> in the title row – the flag shape – drops a marker over
   <strong>every use on screen</strong>. Unlike a selection, a marker survives you clicking somewhere
   else: it is the persistent version of "highlight every use".</p>
   <p><strong>Tick some rows first and it marks only those.</strong> The tick boxes are one
   selection, used by everything: the timeline selection, Move, Put back and the marker button. With
-  nothing ticked the button still marks every use on screen, which is the quick gesture — open a
+  nothing ticked the button still marks every use on screen, which is the quick gesture – open a
   clip, press the flag. Removing markers ignores the ticks on purpose: it is the tidy-up, so it
   clears every <code>Trace ·</code> marker in the view and never touches one you wrote yourself.</p>
   <p>What it marks depends on where you are:</p>
@@ -993,51 +997,51 @@
     <tr><th>In this view</th><th>It marks</th></tr>
     <tr><td>One clip</td><td>Every use of that clip, named after it</td></tr>
     <tr><td>One sequence</td><td>Every use of every clip in the list, each marker named after its
-      own clip. <strong>Only reused</strong> narrows this too — if you filtered the list, it marks
+      own clip. <strong>Only reused</strong> narrows this too – if you filtered the list, it marks
       what is left.</td></tr>
     <tr><td>The whole project</td><td>Nothing. Markers go on a timeline, and this view lists media
       files. The panel says so rather than doing nothing.</td></tr>
   </table>
   <figure>
     <img src="assets/plus-markers.gif" alt="Pressing the marker button in Trace+'s title row while looking at a whole sequence, and markers appearing above every use across the timeline.">
-    <figcaption><strong>The marker button</strong> — the flag that outlives the selection. In
+    <figcaption><strong>The marker button</strong> – the flag that outlives the selection. In
       sequence mode that is every clip in the list, each marker named after its own.</figcaption>
   </figure>
   <div class="note">
     <p><b>One undo step per sequence, and the panel says how many before you press it.</b> Markers
-    for nine uses across four sequences is four undo steps, not one — each sequence's markers are
+    for nine uses across four sequences is four undo steps, not one – each sequence's markers are
     their own object and Premiere cannot group them.</p>
   </div>
   <div class="note">
     <p><strong>Tick some uses first and it marks only those.</strong> The tick boxes are one selection,
   used by the timeline selection, Move, Put back and the marker button alike. With nothing ticked it
-  marks every use on screen, which is the quick gesture — open a clip, press the flag.</p>
+  marks every use on screen, which is the quick gesture – open a clip, press the flag.</p>
 
-  <p><b>And <strong>alt-click the marker button</strong> takes them off again.</b> Same scope as marking — whichever
-    sequences the current view is about — so mark from a sequence view, unmark from the same view, and
+  <p><b>And <strong>alt-click the marker button</strong> takes them off again.</b> Same scope as marking – whichever
+    sequences the current view is about – so mark from a sequence view, unmark from the same view, and
     you are exactly where you started.</p>
-    <p>It removes markers named <code>Trace · …</code> and nothing else, ever. Your own markers —
-    notes, VFX flags, music cues — sit in the same list and are never touched. The status line says so
+    <p>It removes markers named <code>Trace · …</code> and nothing else, ever. Your own markers –
+    notes, VFX flags, music cues – sit in the same list and are never touched. The status line says so
     after every run.</p>
   </div>
 
   <p>Set a colour in <strong>☰ &gt; Settings</strong> &gt; <strong>Marker colour</strong> and each
   sequence costs a <em>second</em> step, because a marker does not exist until its transaction has
-  committed and its colour has to be set afterwards. On the default — Premiere's own colour — you
+  committed and its colour has to be set afterwards. On the default – Premiere's own colour – you
   pay nothing for a feature you did not ask for. Pressing the button twice never repaints the first
   run's markers.</p>
 
   <h2 id="archive">Move to a bin</h2>
   <p>Tick the rows you want out of your way and press the <strong>Move</strong> button. It names the
-  count, the destination and the undo cost before you press it — <em>Move 47 to <code>_OFFLINE</code></em>
-  — so there is nothing to confirm afterwards.</p>
+  count, the destination and the undo cost before you press it – <em>Move 47 to <code>_OFFLINE</code></em>
+  – so there is nothing to confirm afterwards.</p>
   <p><b>The bin is named after the filter that found the rows.</b> With <strong>Offline</strong> on it
   reads <code>_OFFLINE</code>; otherwise it is whatever <strong>☰ &gt; Settings</strong> calls the
   archive, <code>_UNUSED</code> by default. Nothing to type, and the name always describes what is
   in it.</p>
   <p><b>To send them somewhere else, press the caret beside the button.</b> It lists the filter’s own
   bin, the archive from Settings, bins Trace+ has filed into before, and every top-level bin already in
-  your project — then <strong>New bin…</strong> at the foot, which opens a name box above the list.
+  your project – then <strong>New bin…</strong> at the foot, which opens a name box above the list.
   <kbd>Enter</kbd> accepts it, <kbd>Esc</kbd> cancels.</p>
   <p>The caret is a separate control from the button on purpose: one target that sometimes files
   forty clips and sometimes opens a menu is a mis-click waiting to happen.</p>
@@ -1051,33 +1055,33 @@
       Whatever the panel files, the panel can return.</li>
   </ul>
   <figure>
-    <img src="assets/plus-archive.gif" alt="Three unused clips ticked in Trace+, then the Move button pressed — and the archive bins appearing in the Project panel, mirroring the bins the clips came from.">
+    <img src="assets/plus-archive.gif" alt="Three unused clips ticked in Trace+, then the Move button pressed – and the archive bins appearing in the Project panel, mirroring the bins the clips came from.">
     <figcaption><strong>Moved, not removed.</strong> The bins appear in the Project panel as it
-      files, mirroring where each clip came from — which is what makes the trip back
+      files, mirroring where each clip came from – which is what makes the trip back
       possible.</figcaption>
   </figure>
   <div class="note">
     <p><b>It only ever remembers bins it filed into itself.</b> Trace+ never decides that a bin
-    <em>looks</em> like an archive — that way it would offer to empty a folder you named
+    <em>looks</em> like an archive – that way it would offer to empty a folder you named
     <code>_OLD</code> for your own reasons. The list is a record of what it did, not a guess.</p>
   </div>
   <p>Two shapes, in <strong>☰ &gt; Settings</strong>:</p>
   <table>
-    <tr><th>Mirror</th><td>Recreates each item's bin path inside the archive —
+    <tr><th>Mirror</th><td>Recreates each item's bin path inside the archive –
       <code>_UNUSED/Footage/Day 2</code>. Slower to look at, and it is the only version that can be
       undone by the panel later, because <strong>the path IS the record of where the clip came
       from</strong>.</td></tr>
     <tr><th>Flat</th><td>Everything straight into <code>_UNUSED</code>. Tidier, and there is no trail
-      back — those files return to the top level if you put them back.</td></tr>
+      back – those files return to the top level if you put them back.</td></tr>
   </table>
   <p>You can rename the bin from <code>_UNUSED</code> to anything you like in the same place.</p>
   <div class="note warn">
-    <p><b>It refuses to file away media that is in use.</b> Not "warns" — refuses, and counts the
+    <p><b>It refuses to file away media that is in use.</b> Not "warns" – refuses, and counts the
     refusal in the status line. Filing away footage from under a live edit is the one mistake this
     panel exists to prevent.</p>
   </div>
   <p>Archived items get a <strong>tan</strong> colour label so they are obvious in the Project panel.
-  Nothing is copied, nothing leaves the project, and nothing is deleted —
+  Nothing is copied, nothing leaves the project, and nothing is deleted –
   <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>-Z undoes it like any other edit.</p>
 
   <h2 id="putback">Putting it back</h2>
@@ -1100,10 +1104,10 @@
       panel that writes to your project without a press, and a panel that rearranges a Project panel
       you did not ask it to rearrange is one you stop trusting. Turning it on is a choice you make
       once.</li>
-    <li><strong>It only ever moves what Trace+ filed.</strong> Same contract as the button — nothing
+    <li><strong>It only ever moves what Trace+ filed.</strong> Same contract as the button – nothing
       outside <code>_UNUSED</code> is touched, ever.</li>
     <li><strong>It runs whatever view you are in.</strong> It used to need All media open, which
-      made it useless for the moment it exists for — pulling an archived clip back into a cut is
+      made it useless for the moment it exists for – pulling an archived clip back into a cut is
       something you do while looking at the cut. It now watches in the background from any view and
       files the clip the moment the index sees it back on a timeline.</li>
     <li><strong>It learns what is in the archive once per session.</strong> Turning the setting on
@@ -1113,17 +1117,18 @@
       A tidy-up that keeps failing quietly is worse than one that does not run.</li>
   </ul>
   <figure>
-    <img src="assets/plus-autoback.gif" alt="Put used clips back set to Auto in Trace+'s settings, then an archived clip that has been cut back into a timeline moving out of _UNUSED and into its original bin on its own, with no cursor on screen.">
-    <figcaption><strong>No press, on purpose.</strong> The cursor leaves and the clip files itself —
-      which is exactly why this one is off until you turn it on.</figcaption>
+    <img src="assets/plus-autoback.gif" alt="18 unused files ticked in Trace+ and moved into _UNUSED, then one of them dragged from _UNUSED onto the timeline, and Trace+ filing it straight back into the B-roll bin it came from, with the used and not used totals updating.">
+    <figcaption><strong>File it, change your mind, use it.</strong> With automatic put-back switched
+      on, the clip goes back to the bin it came from the moment it lands on a timeline – which is
+      exactly why this one is off until you turn it on.</figcaption>
   </figure>
   <figure>
-    <img src="assets/plus-putback.gif" alt="An archived clip badged Used again, then Put back pressed — the clip returns to Footage / Day 2 and the emptied archive bins disappear from the Project panel.">
+    <img src="assets/plus-putback.gif" alt="An archived clip badged Used again, then Put back pressed – the clip returns to Footage / Day 2 and the emptied archive bins disappear from the Project panel.">
     <figcaption><strong>Used again.</strong> One press returns it to the bin it came from, and the
       bins the archive created go with it.</figcaption>
   </figure>
   <ul>
-    <li>Each item returns to <strong>the bin it came from</strong> — read out of the archive path
+    <li>Each item returns to <strong>the bin it came from</strong> – read out of the archive path
       itself. Nothing is remembered anywhere, which is why it still works on another machine, in
       another session, after somebody has dragged things around by hand.</li>
     <li>If the original bin was deleted while the media sat in the archive, it is
@@ -1132,7 +1137,7 @@
       level. Those two are indistinguishable from here, and the panel says how many.</li>
     <li><strong>The empty bins go with it.</strong> Filing away creates bins; putting everything back
       used to leave them standing, empty, mirroring a structure that now existed twice. They are
-      cleaned up — but only the ones that are genuinely empty, subtree and all.</li>
+      cleaned up – but only the ones that are genuinely empty, subtree and all.</li>
   </ul>
   <div class="note">
     <p><b>It does not clear the tan label.</b> The colour says "this was archived", and quietly
@@ -1145,26 +1150,27 @@
 
   <h2 id="select">Selecting and the Source Monitor</h2>
   <p>Everything the free panel does, unchanged. Press <strong>Select all N in this sequence</strong>
-  and every use becomes a real Premiere selection at the same moment — nudge them, delete them,
+  and every use becomes a real Premiere selection at the same moment – nudge them, delete them,
   apply an effect. <kbd>Shift</kbd>-click or double-click any use to open it in the Source Monitor
   with that use set as in and out.</p>
   <div class="note warn">
-    <p><b>A selection cannot span two sequences.</b> Premiere's own limit, not the panel's. Picking
-    uses in a second sequence clears the first set, and the status line says it happened.</p>
+    <p><b>A selection cannot span two sequences.</b> Premiere's own limit, not the panel's. Your
+    picks in other sequences are kept, and <strong>Next cut</strong> opens each one in turn and
+    selects them there.</p>
   </div>
 
   <h2 id="copy">Copying and exporting</h2>
-  <p><strong>☰ &gt; Copy list</strong> puts what is on screen on the clipboard as plain text —
-  whichever view you are in, filters and all. It is what the list is showing, not what it could show,
+  <p><strong>☰ &gt; Copy list</strong> puts what is on screen on the clipboard as plain text –
+  in the clip view or the Active cut view, filters and all. It is what the list is showing, not what it could show,
   so a filtered list copies filtered.</p>
   <p><strong>☰ &gt; Export CSV</strong> is the other half of that: a file a spreadsheet opens without
-  anybody repairing it first. Same rule — it exports what is on screen — and <strong>what you get
+  anybody repairing it first. Same rule – it exports what is on screen – and <strong>what you get
   depends on the view you are in</strong>, because the three views answer three questions:</p>
   <table>
     <tr><th>In this view</th><th>You get</th></tr>
     <tr><td>One clip</td><td>Every use: sequence, start, duration, track, and the nest it came
       through</td></tr>
-    <tr><td>One sequence</td><td><strong>A cue sheet</strong> — every clip in the cut, how many
+    <tr><td>One sequence</td><td><strong>A cue sheet</strong> – every clip in the cut, how many
       times, its screen time, and what percentage of the sequence that is</td></tr>
     <tr><td>The whole project</td><td>Every media file: bin, kind, used or not, use and sequence
       counts, size in bytes, and the path on disk</td></tr>
@@ -1172,11 +1178,11 @@
   <div class="note">
     <p><b>Screen time is the merged span, not the sum of the uses.</b> Two uses that overlap on V1
     and V2 are one moment on screen. Adding them would tell a music supervisor that a 30-second cut
-    contains 40 seconds of one track — so the cue sheet refuses to, while still reporting the honest
+    contains 40 seconds of one track – so the cue sheet refuses to, while still reporting the honest
     number of uses.</p>
   </div>
   <p>If Premiere cannot open a save dialog, the CSV goes to the clipboard instead and the status line
-  says that is what happened — never a file you then cannot find.</p>
+  says that is what happened – never a file you then cannot find.</p>
 
   <h2 id="detail">How much to show</h2>
   <p><strong>☰ &gt; Settings</strong> &gt; <strong>Detail</strong> has two levels, and they change
@@ -1190,9 +1196,9 @@
   <p>Set it to Clean on a narrow dock and Detailed when you are actually investigating something.
   It is one press either way.</p>
   <div class="note">
-    <p><b>Neither level hides the status line.</b> The strip along the bottom — how many sequences
+    <p><b>Neither level hides the status line.</b> The strip along the bottom – how many sequences
     were indexed and how long it took, what is being scanned right now, and the confirmation after
-    anything is moved, marked or labelled — is there at both levels. Detail is about how much each
+    anything is moved, marked or labelled – is there at both levels. Detail is about how much each
     <em>row</em> says, not about how much the panel tells you.</p>
     <p>The one thing that does hide it is docking the panel very short, where there is no room for a
     strip at all.</p>
@@ -1201,9 +1207,9 @@
   <h2 id="settings">Every setting</h2>
   <p><strong>☰ &gt; Settings</strong>. The window sizes itself to what is in it, and everything is
   saved for next time. <strong>Point at any setting and the strip along the bottom says what it
-  does</strong> — the explanations live in one place instead of appearing as a tooltip over the
+  does</strong> – the explanations live in one place instead of appearing as a tooltip over the
   control you are trying to read.</p>
-  <p><b>Text size is not in Settings.</b> It is a slider at the right-hand end of the status strip along the bottom of the panel —
+  <p><b>Text size is not in Settings.</b> It is a slider at the right-hand end of the status strip along the bottom of the panel –
   <code>Aa</code> at each end, four steps. Click anywhere on the rail, or focus it and use the arrow
   keys; the list holds its place while the size changes, so you do not lose where you were. A panel
   docked down the side of a 4K display draws 11px labels at about five millimetres, and this one is
@@ -1211,29 +1217,29 @@
 
   <table>
     <tr><th>Setting</th><th>What it does</th></tr>
-    <tr><td><strong>Unused layout</strong></td><td>Mirror or Flat — see
+    <tr><td><strong>Unused layout</strong></td><td>Mirror or Flat – see
       <a href="#archive">Move to _UNUSED</a>. Mirror is the one with a way back.</td></tr>
     <tr><td><strong>File unused into</strong></td><td>The archive bin's name. <code>_UNUSED</code> by
       default.</td></tr>
-    <tr><td><strong>Detail</strong></td><td>Clean or Detailed — see
+    <tr><td><strong>Detail</strong></td><td>Clean or Detailed – see
       <a href="#detail">above</a>.</td></tr>
-    <tr><td><strong>Times</strong></td><td>Timecode — what you say out loud — or frames, which is
+    <tr><td><strong>Times</strong></td><td>Timecode – what you say out loud – or frames, which is
       what a VFX list asks for. Applies to <strong>Copy list</strong> too.</td></tr>
     <tr><td><strong>Label picker</strong></td><td>Shows or hides the swatch bar you press to apply a
       colour label.</td></tr>
-    <tr><td><strong>Clip labels</strong></td><td>Shows or hides each row's existing label — the
+    <tr><td><strong>Clip labels</strong></td><td>Shows or hides each row's existing label – the
       readout. Two different settings on purpose: wanting to see the organisation you already did,
       without the temptation to change it, is a real preference.</td></tr>
-    <tr><td><strong>Tags</strong></td><td><em>Not in Settings — it is the tag button in the
+    <tr><td><strong>Tags</strong></td><td><em>Not in Settings – it is the tag button in the
       toolbar</em>, next to the filter funnel. It shows or hides the VIDEO / AUDIO / STILL / NEST /
       MULTICAM tags, and lights while they are hidden. See
       <a href="#rowlabels">What each row is</a>.</td></tr>
     <tr><td><strong>Put used clips back</strong></td><td><strong>Auto</strong> or
       <strong>Manual</strong>. Auto is the only thing in the panel that writes to your project
       without a press: when a clip you filed into <code>_UNUSED</code> is cut back into a timeline,
-      it returns to the bin it came from. Off by default — see
+      it returns to the bin it came from. Off by default – see
       <a href="#putback">Putting it back</a>.</td></tr>
-    <tr><td><strong>Marker colour</strong></td><td>Premiere's own colour by default — press a swatch
+    <tr><td><strong>Marker colour</strong></td><td>Premiere's own colour by default – press a swatch
       to change it, and the name of the one you are on is written beside them. Choosing a colour
       costs a second undo step per sequence, and the panel says so where the choice is made.</td></tr>
   </table>
@@ -1241,26 +1247,26 @@
   <div class="note">
     <p><b>The label picker only appears once something is ticked.</b> It used to sit there
     permanently, because the label RULES lived inside it and they were how you chose what got
-    coloured. The rules were removed in 0.71.0 — three of the five said exactly what a filter chip
-    above them said — so the bar went back to appearing when there is a selection and nowhere else.
+    coloured. The rules were removed in 0.71.0 – three of the five said exactly what a filter chip
+    above them said – so the bar went back to appearing when there is a selection and nowhere else.
     In sequence mode it colours the clips you have ticked; in All media, the files.</p>
   </div>
 
   <h2 id="gestures">Every gesture</h2>
   <table>
     <tr><th>Do this</th><th>Get this</th></tr>
-    <tr><td>Click a sequence name</td><td>Opens that group and closes the others, so the list stays a
-      list. <kbd>Cmd</kbd> / <kbd>Ctrl</kbd>-click a name to keep more than one open at a time</td></tr>
+    <tr><td>Click a sequence name</td><td>Opens or closes that group. Several can be open at once.
+      <kbd>Cmd</kbd> / <kbd>Ctrl</kbd>-click a name to open it and close all the others</td></tr>
     <tr><td>Click a use</td><td>Jump the playhead there and select that clip</td></tr>
     <tr><td>Click a clip row (sequence view)</td><td>Expand it in place to show every use</td></tr>
     <tr><td><kbd>Shift</kbd>-click, or double-click</td><td>Open in the Source Monitor, with that use
       set as in/out</td></tr>
     <tr><td><kbd>Cmd</kbd> / <kbd>Ctrl</kbd>-click, or the tick box</td><td>Add or remove from the
       selection. On a clip row it picks every one of its uses at once</td></tr>
-    <tr><td><kbd>Alt</kbd>-click</td><td><strong>Find in Project</strong> — copies the clip's name for
+    <tr><td><kbd>Alt</kbd>-click</td><td><strong>Find in Project</strong> – copies the clip's name for
       the Project panel's Find box (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd>-F). The <strong>Find</strong>
       button beside the bin path does the same thing</td></tr>
-    <tr><td>Click a row in <strong>All media</strong></td><td>Opens the cut that uses it — the busiest
+    <tr><td>Click a row in the <strong>Project</strong> view</td><td>Opens the cut that uses it – the busiest
       one, with the status line saying which and how many others there were</td></tr>
     <tr><td>The tick box on a clip row</td><td>Selects every use of that clip in the timeline at once.
       Half-filled means some of its uses are selected, not all</td></tr>
@@ -1272,7 +1278,7 @@
   <div class="note">
     <p><b>The same gesture means the same thing in every list.</b> Plain click opens, <kbd>Alt</kbd>
     copies the name, <kbd>Shift</kbd> goes to the Source Monitor. Until 0.74.0 a plain click in
-    All media copied the name instead — the same press doing two different things depending which
+    All media copied the name instead – the same press doing two different things depending which
     list you were in, and the surprising one quietly replaced your clipboard.</p>
   </div>
 
@@ -1291,9 +1297,12 @@
 
   <h2 id="updates">Updates and About</h2>
   <p>Trace+ checks once a day whether a newer version exists and shows a small notice in the panel if
-  so. <strong>Help and licence… &gt; Check for updates</strong> asks immediately.</p>
-  <p><strong>☰ &gt; Help and licence…</strong> shows the version you are running — the first thing to
-  quote if you report a problem — along with your licence and a link back to this site.</p>
+  so. <strong>☰ &gt; Help &amp; licence…</strong> asks every time it opens and says the answer under
+  the version number: <em>You're up to date</em>, a newer version you can press to download, or
+  <em>Couldn't check for updates</em> if the update server could not be reached. <strong>Check for
+  updates</strong> at the bottom of that window asks again and shows the answer in its place.</p>
+  <p><strong>☰ &gt; Help &amp; licence…</strong> shows the version you are running – the first thing to
+  quote if you report a problem – along with your licence and a link back to this site.</p>
   <p><strong>☰ &gt; Tour</strong> re-opens the short tour that runs the first time you open the
   panel.</p>
 
@@ -1302,7 +1311,7 @@
   track items it read, how long the index took, how many media files it measured and by which route,
   how many times it has rebuilt, and anything that went wrong along the way.</p>
   <p>It has its own bar with <strong>Copy</strong> and <strong>Hide</strong> on it, and
-  <strong>☰ &gt; Copy scan report</strong> does the same thing from the menu — which is there so
+  <strong>☰ &gt; Copy scan report</strong> does the same thing from the menu – which is there so
   that copying a support report never depends on one row of the panel drawing.</p>
   <p><b>Opening it does not take your clipboard.</b> It used to, and a diagnostic is exactly the
   thing you open in the middle of doing something else.</p>
@@ -1322,30 +1331,31 @@
   <table>
     <tr><th></th><th>Why</th></tr>
     <tr><td class="no">Reveal a clip in the Project panel</td><td>The Project panel's selection is
-      <strong>read-only</strong> to plugins — the timeline's is read-write, and that split is
+      <strong>read-only</strong> to plugins – the timeline's is read-write, and that split is
       deliberate rather than a gap waiting on an update. Re-checked five times, most recently against
       the unreleased 26.5 beta: no <code>reveal</code>, no <code>scrollTo</code>, no way to set a
       Project panel selection, and Premiere's own <em>Reveal in Project</em> command cannot be
       triggered either.<br><br>So Trace+ does the two halves it can: it <strong>shows you the
-      bin</strong> under the clip name, and <strong>Find in Project</strong> — the button beside it,
-      or <kbd>Alt</kbd>-click on any row — copies the exact name for the Project panel's Find box. It
+      bin</strong> under the clip name, and <strong>Find in Project</strong> – the button beside it,
+      or <kbd>Alt</kbd>-click on any row – copies the exact name for the Project panel's Find box. It
       is called Find rather than Reveal because that is what it does.</td></tr>
     <tr><td class="no">Colour a clip that is already in the timeline</td><td>Colour labels are
       project-item only. Labelling the master is the closest thing, and Premiere's own behaviour
       carries it to the instances. See <a href="#labels">Colour labels</a>.</td></tr>
-    <tr><td class="no">Delete anything</td><td>Deliberate, not missing. The most destructive thing in
-      the panel moves items into a bin.</td></tr>
+    <tr><td class="no">Delete a file</td><td>Deliberate, not missing. Nothing on your disk is ever
+      touched. Inside the project, the most it removes is a spare copy of a file you imported twice, or
+      a bin with nothing in it, and both are one undo step.</td></tr>
     <tr><td class="no">Zoom or scroll the timeline</td><td>No API. Moving the playhead is the only
       navigation, and Premiere scrolls to follow it.</td></tr>
     <tr><td class="no">Resolve merged or multicam clips</td><td>Nothing exists for reading the
-      sources inside one — no plugin can do it. Trace+ flags them rather than guessing, and warns
+      sources inside one – no plugin can do it. Trace+ flags them rather than guessing, and warns
       when a project contains any that are in use, because a file used <em>only</em> through a merged
       clip looks unused here. See <a href="#unused">What counts as unused</a>.</td></tr>
     <tr><td class="no">Appear in Premiere's own Keyboard Shortcuts list</td><td>A UXP plugin's
       commands cannot be bound in <em>Edit &gt; Keyboard Shortcuts</em>, and Adobe staff confirmed in
       April 2026 that this is not planned.<br><br>This is narrower than "no shortcuts at all", which
-      is what most people will tell you. A UXP <em>hybrid</em> plugin — one carrying a small native
-      add-on, Premiere 26.2 and up — can register a shortcut with the operating system, which is how
+      is what most people will tell you. A UXP <em>hybrid</em> plugin – one carrying a small native
+      add-on, Premiere 26.2 and up – can register a shortcut with the operating system, which is how
       the plugins that do have one manage it. Trace+ does not ship a native add-on today.</td></tr>
     <tr><td class="no">Search other or unopened projects</td><td>The API cannot reach a project that
       is not open. Productions are out for the same reason.</td></tr>
@@ -1360,10 +1370,17 @@
   interfere, but one panel is enough.</p>
 
   <h3>Is it safe to run on a job that is on air?</h3>
-  <p>Reading is always safe — it opens nothing and changes nothing. The four things that write to
-  your project are colour labels, markers, <strong>Move to _UNUSED</strong> and <strong>Put
-  back</strong>, and all four are ordinary Premiere edits that <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>-Z
-  undoes. The panel names the undo cost on the button before you press it.</p>
+  <p>Reading is always safe – it opens nothing and changes nothing. These are the things that write to
+  your project, and only when you press them:</p>
+  <ul>
+    <li>colour labels and markers</li>
+    <li><strong>Move to _UNUSED</strong> and <strong>Put back</strong> (and automatic put-back, which is
+      off until you switch it on)</li>
+    <li>removing spare copies of a file imported twice, and removing empty bins</li>
+    <li>the sequences it builds: stringouts and the unused parts of a clip</li>
+  </ul>
+  <p>Every one is an ordinary Premiere edit that <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>-Z undoes, and none of
+  them touches a file on your disk.</p>
 
   <h3>Why is the first scan slow?</h3>
   <p>It reads every track item in every sequence, then walks every bin, then measures every media
@@ -1371,7 +1388,7 @@
   slow part. After that it re-uses what it has and only re-measures when the media actually changes.</p>
 
   <h3>It says a clip is unused and I am sure it is in the cut</h3>
-  <p>Four things do this, in order of likelihood — see <a href="#troubleshooting">Troubleshooting</a>.</p>
+  <p>Four things do this, in order of likelihood – see <a href="#troubleshooting">Troubleshooting</a>.</p>
 
   <h3>Can I change the archive bin's name?</h3>
   <p>Yes, in <strong>☰ &gt; Settings</strong>. Do it before you file anything: rename it afterwards
@@ -1381,17 +1398,18 @@
   <p>It reads the project that is open. It cannot see the other projects in a Production, because the
   API cannot reach a project that is not open.</p>
 
-  <h3>What happens when my licence expires or I stop paying?</h3>
-  <p>Nothing you have already done is affected — labels, markers and archived bins are ordinary parts
-  of your project and belong to you. The panel returns to its locked state and the paid views stop
-  drawing.</p>
+  <h3>What happens if I remove the licence from a computer?</h3>
+  <p>Nothing you have already done is affected – labels, markers and archived bins are ordinary parts
+  of your project and belong to you. The panel returns to its locked state until a key is activated
+  again. Trace+ is a one-time purchase: the licence does not expire, and one licence covers 2
+  computers.</p>
 
   <h2 id="troubleshooting">Troubleshooting</h2>
 
   <h3>Trace+ isn't in the Window menu</h3>
   <ul>
     <li>Premiere must be <strong>25.6.0 or newer</strong>. Check <em>About Premiere Pro</em>.</li>
-    <li>Restart Premiere after installing — UXP plugins are only read at launch.</li>
+    <li>Restart Premiere after installing – UXP plugins are only read at launch.</li>
     <li>Look under <strong>Window &gt; UXP Plugins</strong>, not <em>Extensions</em>. That submenu is
       for the older CEP kind.</li>
   </ul>
@@ -1399,18 +1417,18 @@
   <h3>It says a clip is unused and I am sure it is in the cut</h3>
   <ul>
     <li><strong>The uses are in archived sequences.</strong> Look under <em>Used only in archived
-      sequences</em>, and untick <em>Hide old cuts</em> in the clip view.</li>
+      sequences</em>, and press <em>All cuts</em> in the clip view.</li>
     <li><strong>It is a different import of the same file.</strong> Check <em>Imported more than
-      once</em> — Trace+ counts by file, but two files with the same name are two files.</li>
+      once</em> – Trace+ counts by file, but two files with the same name are two files.</li>
     <li><strong>It is a merged or multicam clip.</strong> Trace+ flags this under the totals.</li>
-    <li><strong>The sequence has never been opened in this session.</strong> Press the
-      <strong>circular arrow</strong> in the title row.</li>
+    <li><strong>The sequence has never been opened in this session.</strong> Press
+      <strong>☰ &gt; Re-scan project</strong>.</li>
   </ul>
 
   <h3>The weight says "unmeasured" for a lot of files</h3>
   <p>Either the volume is offline, or Premiere has not been granted access to it. The
   <strong>scan report</strong> lists which route the panel used to reach the files and what each one
-  did — that is the fastest way to tell the two apart.</p>
+  did – that is the fastest way to tell the two apart.</p>
 
   <h3>I pressed a colour and nothing changed</h3>
   <p>Look at the Project panel's <strong>Label</strong> column, not the timeline. If the clip is
@@ -1418,12 +1436,12 @@
   no plugin can change it.</p>
 
   <h3>Move to _UNUSED refused some of my rows</h3>
-  <p>Their media is in use somewhere — that refusal is the point. The status line says how many were
+  <p>Their media is in use somewhere – that refusal is the point. The status line says how many were
   refused. If you disagree, the row will be in <em>Not placed, but their media is used</em>.</p>
 
   <h3>The numbers look out of date</h3>
   <p>Trace+ re-scans on its own as you edit, but <strong>☰ &gt; Re-scan project</strong>
-  forces it — and re-measures the media, which the automatic scan deliberately does not.</p>
+  forces it – and re-measures the media, which the automatic scan deliberately does not.</p>
 
   <h3>The panel is squashed or the buttons overlap</h3>
   <p>Drag the dock wider or taller, and set <strong>Detail</strong> to <strong>Clean</strong>. Below
@@ -1437,9 +1455,9 @@
   <em>contents</em>, and it never uploads anything.</p>
   <p>What leaves your machine, ever:</p>
   <ul>
-    <li><strong>Licence activation</strong> — your key and a machine identifier, to the licence
+    <li><strong>Licence activation</strong> – your key and a machine identifier, to the licence
       server, so seats can be counted. Once, at activation, and again if you press Remove.</li>
-    <li><strong>The update check</strong> — a request for the current version number, once a day.</li>
+    <li><strong>The update check</strong> – a request for the current version number, once a day.</li>
   </ul>
   <p>Nothing else. No project names, no file paths, no media, no analytics. The
   <a href="#report">scan report</a> is the one place your file paths appear, and it is something you
@@ -1447,7 +1465,7 @@
 
   <h2 id="support">Support</h2>
   <p>Email <a href="mailto:hello@nkcourses.co.uk">hello@nkcourses.co.uk</a>. Include the version from
-  <strong>☰ &gt; Help and licence…</strong>, say what you selected and what you expected — and paste
+  <strong>☰ &gt; Help &amp; licence…</strong>, say what you selected and what you expected – and paste
   the <a href="#report">scan report</a>. That is the fastest possible bug report and it usually
   answers the question on its own.</p>
 
