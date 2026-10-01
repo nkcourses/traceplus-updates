@@ -375,7 +375,7 @@
 
   <h2 id="install">Install</h2>
   <ol>
-    <li>Double-click the <code>.ccx</code> file. Creative Cloud installs it.</li>
+    <li>Open the Creative Cloud desktop app, then double-click the <code>.ccx</code> file. Creative Cloud installs it. Nothing happened? <a href="#install-fallback">Install it from Terminal</a> instead.</li>
     <li>Restart Premiere Pro.</li>
     <li><strong>Window &gt; UXP Plugins &gt; Trace+</strong>.</li>
     <li>Drag the panel wherever you want it. It docks like any other.</li>
@@ -772,7 +772,8 @@
   <p><strong>You choose which filters sit on the panel.</strong> In <strong>Filters</strong>, the pin
   beside a filter puts it above the list; every filter you have pinned is listed under
   <strong>On the panel</strong>, where its struck-through pin turns yellow when you point at it and
-  one press unpins it.</p>
+  one press unpins it. <strong>Search</strong> pins the same way, with the pin beside its heading: pinned,
+  the search box sits above the list in the Project view, the Active cut view and a bin.</p>
 
   <p>Above the list, each chip carrying its own live count:</p>
 
@@ -1405,6 +1406,21 @@
   computers.</p>
 
   <h2 id="troubleshooting">Troubleshooting</h2>
+
+  <h3 id="install-fallback">Double-clicking the .ccx did nothing, or said &ldquo;Creative Cloud cannot open files of this type&rdquo;</h3>
+  <p>Creative Cloud Desktop has to be installed and signed in. <strong>Open it first, then
+  double-click the file again.</strong> That fixes most cases.</p>
+  <p>Still not working? Nothing is wrong with the file. Install it with Adobe&rsquo;s own plugin
+  installer instead, the same one Creative Cloud uses behind the scenes. Quit Premiere first.</p>
+  <p><strong>Mac:</strong> open <em>Terminal</em> (Applications &gt; Utilities), type
+  <code>"/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent" --install&nbsp;</code>
+  (the whole path is inside the quote marks, and there is a space after <code>--install</code>), then
+  drag the Trace+ <code>.ccx</code> file into the Terminal window and press Return.</p>
+  <p><strong>Windows:</strong> open <em>Command Prompt</em> (not PowerShell) and use
+  <code>"C:\Program Files\Common Files\Adobe\Adobe Desktop Common\RemoteComponents\UPI\UnifiedPluginInstallerAgent\UnifiedPluginInstallerAgent.exe" /install "C:\path\to\Trace-Plus.ccx"</code>
+  with the real path to your file.</p>
+  <p>When it finishes, restart Premiere and look under <strong>Window &gt; UXP Plugins</strong>. Still
+  stuck? <a href="mailto:support@nkcourses.co.uk">Email me</a> and I will sort it with you.</p>
 
   <h3>Trace+ isn't in the Window menu</h3>
   <ul>
