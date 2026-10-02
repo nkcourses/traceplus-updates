@@ -230,6 +230,9 @@
     main{padding-top:24px}
     h1{font-size:32px}
   }
+  /* Install commands: wrap anywhere, one click selects the lot. */
+  code.cmd{display:block; margin:8px 0 14px; padding:10px 12px; line-height:1.5;
+    white-space:pre-wrap; overflow-wrap:anywhere; user-select:all}
 </style></head>
 <body>
 
@@ -375,7 +378,7 @@
 
   <h2 id="install">Install</h2>
   <ol>
-    <li>Open the Creative Cloud desktop app, then double-click the <code>.ccx</code> file. Creative Cloud installs it. Nothing happened? <a href="#install-fallback">Install it from Terminal</a> instead.</li>
+    <li>Open the Creative Cloud desktop app, then double-click the <code>.ccx</code> file. Creative Cloud installs it. Nothing happened, or a message saying Creative Cloud cannot open it? <a href="#install-fallback">Install it from Terminal or Command Prompt</a> instead.</li>
     <li>Restart Premiere Pro.</li>
     <li><strong>Window &gt; UXP Plugins &gt; Trace+</strong>.</li>
     <li>Drag the panel wherever you want it. It docks like any other.</li>
@@ -401,13 +404,19 @@
       on. <strong>Remove</strong> frees it again for another machine.</figcaption>
   </figure>
   <ul>
-    <li><strong>Seats.</strong> One key covers more than one machine – the card tells you how many
-      you are using and how many you have.</li>
+    <li><strong>Seats.</strong> A Trace+ key covers <strong>2 machines</strong>, and a Trace+ Studio
+      key covers <strong>10</strong>. The card tells you how many you are using and how many you
+      have.</li>
     <li><strong>Moving to another machine.</strong> Press <strong>Remove</strong> on the old one
       first. That frees the seat straight away; you do not need to email anybody.</li>
     <li><strong>Offline.</strong> Activation needs the internet once. After that the panel reads a
       cached answer, so a laptop on a plane still works.</li>
   </ul>
+  <p id="studio"><strong>Trace+ Studio</strong> is one key for up to <strong>10 machines</strong>, for a team,
+  an edit suite or a post house. Everyone activates the same key the same way, and the Help &amp;
+  licence window shows how many of the 10 are in use. <strong>Remove</strong> works exactly as above,
+  so when someone leaves or changes computer their seat is free again in one press. Need more than
+  10? <a href="#support">Get in touch</a> and I&rsquo;ll set it up.</p>
   <div class="note good">
     <p><b>There is no secret key inside this panel.</b> A licence scheme that needed one would have
     it extracted by the first person who looked, because a UXP plugin is readable JavaScript. The key
@@ -1403,24 +1412,30 @@
   <p>Nothing you have already done is affected – labels, markers and archived bins are ordinary parts
   of your project and belong to you. The panel returns to its locked state until a key is activated
   again. Trace+ is a one-time purchase: the licence does not expire, and one licence covers 2
-  computers.</p>
+  computers, or 10 with Trace+ Studio.</p>
+
+  <h3>Is there a licence for a team?</h3>
+  <p>Yes – <a href="#studio">Trace+ Studio</a>: one key for 10 machines. Every editor activates the
+  same key, and <strong>Remove</strong> frees a seat when someone leaves or changes computer. Need
+  more than 10? <a href="#support">Get in touch</a>.</p>
 
   <h2 id="troubleshooting">Troubleshooting</h2>
 
   <h3 id="install-fallback">Double-clicking the .ccx did nothing, or said &ldquo;Creative Cloud cannot open files of this type&rdquo;</h3>
   <p>Creative Cloud Desktop has to be installed and signed in. <strong>Open it first, then
   double-click the file again.</strong> That fixes most cases.</p>
-  <p>Still not working? Nothing is wrong with the file. Install it with Adobe&rsquo;s own plugin
-  installer instead, the same one Creative Cloud uses behind the scenes. Quit Premiere first.</p>
-  <p><strong>Mac:</strong> open <em>Terminal</em> (Applications &gt; Utilities), type
-  <code>"/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent" --install&nbsp;</code>
-  (the whole path is inside the quote marks, and there is a space after <code>--install</code>), then
-  drag the Trace+ <code>.ccx</code> file into the Terminal window and press Return.</p>
-  <p><strong>Windows:</strong> open <em>Command Prompt</em> (not PowerShell) and use
-  <code>"C:\Program Files\Common Files\Adobe\Adobe Desktop Common\RemoteComponents\UPI\UnifiedPluginInstallerAgent\UnifiedPluginInstallerAgent.exe" /install "C:\path\to\Trace-Plus.ccx"</code>
-  with the real path to your file.</p>
-  <p>When it finishes, restart Premiere and look under <strong>Window &gt; UXP Plugins</strong>. Still
-  stuck? <a href="mailto:support@nkcourses.co.uk">Email me</a> and I will sort it with you.</p>
+  <p>Still not working? Your Mac or PC has lost track of which Adobe app opens .ccx files. Nothing is
+  wrong with the file. Install it with Adobe&rsquo;s own plugin installer instead, the same one
+  Creative Cloud uses behind the scenes. Quit Premiere first.</p>
+  <p><strong>Mac:</strong> open <em>Terminal</em> (Applications &gt; Utilities), paste this, type a
+  space, then drag <code>TracePlus.ccx</code> into the Terminal window and press Return:</p>
+  <code class="cmd">"/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/MacOS/UnifiedPluginInstallerAgent" --install</code>
+  <p><strong>Windows:</strong> open <em>Command Prompt</em> (not PowerShell), paste this, type a
+  space, then drag <code>TracePlus.ccx</code> into the window and press Enter:</p>
+  <code class="cmd">"C:\Program Files\Common Files\Adobe\Adobe Desktop Common\RemoteComponents\UPI\UnifiedPluginInstallerAgent\UnifiedPluginInstallerAgent.exe" /install</code>
+  <p>Dragging the file in types its exact location for you, wherever it was saved. When it finishes,
+  restart Premiere and look under <strong>Window &gt; UXP Plugins</strong>. Still stuck?
+  <a href="mailto:support@nkcourses.co.uk">Email me</a> and I will sort it with you.</p>
 
   <h3>Trace+ isn't in the Window menu</h3>
   <ul>
