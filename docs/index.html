@@ -266,6 +266,7 @@
   <a href="#unused">What counts as unused</a>
   <a href="#weight">How much disk space</a>
   <a href="#duplicates">Duplicates and empty bins</a>
+  <a href="#handover">Handover check</a>
   <a href="#offline">Offline media</a>
   <a href="#search">Searching by name</a>
 
@@ -703,6 +704,36 @@
     <p><b>Sequences count as contents.</b> A bin holding one sequence is not empty, however much it
     looks like it.</p>
   </div>
+
+  <h2 id="handover">Handover check</h2>
+  <p class="lead">Before you send a project to another editor, press <strong>Handover</strong> in the
+  Project view. It checks that everything the project needs will travel with its folder.</p>
+
+  <p>The chip says how many things there are to fix, or <strong>Ready</strong>. Open it and you get
+  one answer at the top, then one line per check:</p>
+  <ul>
+    <li><strong>Files outside the edit folder</strong>, grouped by where they are: on your Desktop,
+      in Downloads, in a cloud-sync folder (Dropbox, Google Drive, iCloud, OneDrive), on another drive,
+      or elsewhere on the same drive – with what each group weighs.</li>
+    <li><strong>Offline files</strong> – anything Premiere cannot find.</li>
+    <li><strong>Proxies outside the folder</strong> – a proxy left on your own drive is easy to miss.</li>
+  </ul>
+  <p>Press a line to see its files, each with its full path. Tick them and use the usual buttons:
+  label them, copy the list, or file the unused ones into <code>_UNUSED</code> so they do not need
+  moving at all.</p>
+
+  <h3>Which folder is the edit folder?</h3>
+  <p>The folder your project file is saved in. If you keep the project file in a sub-folder such as
+  <code>Projects</code>, press <strong>Change</strong> and pick the job folder instead – Trace+
+  remembers it for that project. An unsaved project has no folder yet, so save it first.</p>
+
+  <h3>Fixing what it finds</h3>
+  <p>Trace+ never moves a file on your disk. To bring strays into the folder, use Premiere's
+  <strong>File &gt; Project Manager &gt; Collect Files and Copy to New Location</strong>, or copy
+  them in yourself and relink. For offline files, open that line, tick <strong>All</strong>, press
+  <strong>Move to _OFFLINE</strong>, then in Premiere select that bin's contents, right-click and
+  choose <strong>Link Media</strong>.</p>
+  <p><strong>Copy report</strong> gives you the whole list as text, ready to send with the project.</p>
 
   <h2 id="offline">Offline media</h2>
   <p class="lead">The <strong>Offline</strong> chip is not a relink tool, and that is deliberate –

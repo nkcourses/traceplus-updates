@@ -1,12 +1,13 @@
 {
-  "latest": "1.8.50",
-  "released": "2026-10-01",
-  "headline": "Pin the search box to the panel, and tell your sequences apart at a glance.",
+  "latest": "1.9.0",
+  "released": "2026-10-04",
+  "headline": "New: the Handover check – know a project is ready before you send it to another editor.",
   "url": "https://nkcourses.github.io/traceplus-updates/#history",
   "notes": [
-    "New: pin Search in Filters and the search box sits above the list in the Project view, the Active cut view and a bin",
-    "New: search works in a bin, narrowing its clips by name",
-    "New: other current sequences are tagged ALT SEQUENCE, so they're easy to tell apart from old ones",
-    "Old versions of a sequence are now tagged OLD SEQUENCE"
+    "New: Handover in the Project view checks that everything will travel with the project's folder",
+    "It lists files outside the folder by where they are – Desktop, Downloads, cloud-sync, another drive – with what they weigh",
+    "It also flags offline files and proxies kept outside the folder",
+    "Press Change to check against a different folder; Trace+ remembers it for that project",
+    "Copy report gives you the whole list to send with the project"
   ]
 }
