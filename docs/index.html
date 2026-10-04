@@ -719,19 +719,28 @@
     <li><strong>Proxies outside the folder</strong> – a proxy left on your own drive is easy to miss.</li>
   </ul>
   <p>Press a line to see its files, each with its full path. Tick them and use the usual buttons:
-  label them, copy the list, or file the unused ones into <code>_UNUSED</code> so they do not need
-  moving at all.</p>
+  label them, copy the list, or press <strong>Move</strong> to gather them into a bin of their own:
+  <code>_TO COLLECT</code> for files outside the folder, <code>_TO RELINK</code> for offline ones.
+  Files used in the edit move too, and nothing is coloured – these bins are a to-do list, not
+  the <code>_UNUSED</code> archive.</p>
 
   <h3>Which folder is the edit folder?</h3>
-  <p>The folder your project file is saved in. If you keep the project file in a sub-folder such as
-  <code>Projects</code>, press <strong>Change</strong> and pick the job folder instead – Trace+
-  remembers it for that project. An unsaved project has no folder yet, so save it first.</p>
+  <p>The folder your media is in. Trace+ starts at the folder your project file is saved in and
+  climbs up to 3 levels to the first folder that holds at least half the project's media – so a
+  project file kept in <code>Job/00 PROJECTS/PREMIERE</code> is checked against <code>Job</code>.
+  It never climbs as far as a drive, your home folder, Desktop, Documents or a cloud-sync folder's
+  top, which would let everything pass. The answer says how the folder was found. If it is wrong,
+  press <strong>Change</strong> and pick the job folder yourself – Trace+ remembers it for that
+  project, and <strong>Reset</strong> goes back to the folder it found. Colour mattes, titles and
+  other items made inside Premiere have no file, so they are never counted. An unsaved project
+  has no folder yet, so save it first.</p>
 
   <h3>Fixing what it finds</h3>
   <p>Trace+ never moves a file on your disk. To bring strays into the folder, use Premiere's
   <strong>File &gt; Project Manager &gt; Collect Files and Copy to New Location</strong>, or copy
-  them in yourself and relink. For offline files, open that line, tick <strong>All</strong>, press
-  <strong>Move to _OFFLINE</strong>, then in Premiere select that bin's contents, right-click and
+  them in yourself and relink – ticking them into <code>_TO COLLECT</code> first puts them all in one
+  place. For offline files, open that line, tick <strong>All</strong>, press
+  <strong>Move to _TO RELINK</strong>, then in Premiere select that bin's contents, right-click and
   choose <strong>Link Media</strong>.</p>
   <p><strong>Copy report</strong> gives you the whole list as text, ready to send with the project.</p>
 

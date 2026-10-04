@@ -1,13 +1,13 @@
 {
-  "latest": "1.9.0",
+  "latest": "1.9.1",
   "released": "2026-10-04",
-  "headline": "New: the Handover check – know a project is ready before you send it to another editor.",
+  "headline": "The Handover check now finds your job folder by itself, and gathers strays into a bin that says what they are.",
   "url": "https://nkcourses.github.io/traceplus-updates/#history",
   "notes": [
-    "New: Handover in the Project view checks that everything will travel with the project's folder",
-    "It lists files outside the folder by where they are – Desktop, Downloads, cloud-sync, another drive – with what they weigh",
-    "It also flags offline files and proxies kept outside the folder",
-    "Press Change to check against a different folder; Trace+ remembers it for that project",
-    "Copy report gives you the whole list to send with the project"
+    "The edit folder is now the folder your media is in, found up to 3 levels above the project file – a project kept in Job/00 PROJECTS/PREMIERE is checked against Job. It never climbs to a drive, your Desktop or a cloud folder's top",
+    "The check says how it found the folder, and Reset goes back to it after a Change",
+    "Colour mattes, titles and other items made inside Premiere are no longer listed as files on another drive",
+    "Move on the outside line now files into _TO COLLECT, and on the offline line into _TO RELINK – used files included, and nothing is coloured tan",
+    "Copy report has a copy icon"
   ]
 }
