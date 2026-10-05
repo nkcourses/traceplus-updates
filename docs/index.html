@@ -715,7 +715,9 @@
     <li><strong>Files outside the edit folder</strong>, grouped by where they are: on your Desktop,
       in Downloads, in a cloud-sync folder (Dropbox, Google Drive, iCloud, OneDrive), on another drive,
       or elsewhere on the same drive – with what each group weighs.</li>
-    <li><strong>Offline files</strong> – anything Premiere cannot find.</li>
+    <li><strong>Offline files</strong> – anything Premiere cannot find. A placeholder made with
+      <strong>File &gt; New &gt; Offline File</strong> is not counted: nothing went missing, so it is
+      named in the report instead.</li>
     <li><strong>Proxies outside the folder</strong> – a proxy left on your own drive is easy to miss.</li>
   </ul>
   <p>Press a line to see its files, each with its full path. Tick them and use the usual buttons:
@@ -1393,8 +1395,8 @@
     <tr><th></th><th>Why</th></tr>
     <tr><td class="no">Reveal a clip in the Project panel</td><td>The Project panel's selection is
       <strong>read-only</strong> to plugins – the timeline's is read-write, and that split is
-      deliberate rather than a gap waiting on an update. Re-checked five times, most recently against
-      the unreleased 26.5 beta: no <code>reveal</code>, no <code>scrollTo</code>, no way to set a
+      deliberate rather than a gap waiting on an update. Re-checked six times, most recently on 5 October 2026 against
+      Premiere 26.5.1 and the unreleased 27.0 beta: no <code>reveal</code>, no <code>scrollTo</code>, no way to set a
       Project panel selection, and Premiere's own <em>Reveal in Project</em> command cannot be
       triggered either.<br><br>So Trace+ does the two halves it can: it <strong>shows you the
       bin</strong> under the clip name, and <strong>Find in Project</strong> – the button beside it,

@@ -1,15 +1,10 @@
 {
-  "latest": "1.9.2",
-  "released": "2026-10-04",
-  "headline": "Relink your offline files and Trace+ puts them back in their bins for you.",
+  "latest": "1.9.3",
+  "released": "2026-10-05",
+  "headline": "The Handover check no longer asks you to fix Premiere's own placeholders.",
   "url": "https://nkcourses.github.io/traceplus-updates/#history",
   "notes": [
-    "Files in _OFFLINE go back to the bin they came from once you relink them in Premiere. On by default – Settings › Put relinked files back automatically. Only files Trace+ saw offline are moved, so anything you already keep in _OFFLINE stays put",
-    "One _OFFLINE bin for every offline file, from the Offline chip or the Handover check. Only offline files go in",
-    "The Handover check now counts offline Dynamic Link items, so it agrees with the Offline chip",
-    "Copy report sits on one line and shows a green tick for 2 seconds once it has copied",
-    "The Handover report shows file paths without Premiere's extra slashes",
-    "Move's tooltip tells project items from ticked files, and says what was left out and why",
-    "In Filters, \"On the panel\" is now Panel and \"How rows are drawn\" is now Display"
+    "A placeholder made with File › New › Offline File is no longer counted as an offline file to fix – nothing went missing. It is named in Copy report instead",
+    "The offline line's i explains the difference from the Offline chip's number, and that relinked files go back to their bins by themselves"
   ]
 }
