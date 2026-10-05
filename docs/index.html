@@ -720,7 +720,7 @@
   </ul>
   <p>Press a line to see its files, each with its full path. Tick them and use the usual buttons:
   label them, copy the list, or press <strong>Move</strong> to gather them into a bin of their own:
-  <code>_TO COLLECT</code> for files outside the folder, <code>_TO RELINK</code> for offline ones.
+  <code>_TO COLLECT</code> for files outside the folder, <code>_OFFLINE</code> for offline ones.
   Files used in the edit move too, and nothing is coloured – these bins are a to-do list, not
   the <code>_UNUSED</code> archive.</p>
 
@@ -740,7 +740,7 @@
   <strong>File &gt; Project Manager &gt; Collect Files and Copy to New Location</strong>, or copy
   them in yourself and relink – ticking them into <code>_TO COLLECT</code> first puts them all in one
   place. For offline files, open that line, tick <strong>All</strong>, press
-  <strong>Move to _TO RELINK</strong>, then in Premiere select that bin's contents, right-click and
+  <strong>Move to _OFFLINE</strong>, then in Premiere select that bin's contents, right-click and
   choose <strong>Link Media</strong>.</p>
   <p><strong>Copy report</strong> gives you the whole list as text, ready to send with the project.</p>
 
@@ -820,7 +820,7 @@
 
   <p><strong>You choose which filters sit on the panel.</strong> In <strong>Filters</strong>, the pin
   beside a filter puts it above the list; every filter you have pinned is listed under
-  <strong>On the panel</strong>, where its struck-through pin turns yellow when you point at it and
+  <strong>Panel</strong>, where its struck-through pin turns yellow when you point at it and
   one press unpins it. <strong>Search</strong> pins the same way, with the pin beside its heading: pinned,
   the search box sits above the list in the Project view, the Active cut view and a bin.</p>
 
@@ -1145,15 +1145,24 @@
        it. The setting's whole safety argument is that it is off by default and
        says so; documentation that skipped it would leave the one person who
        turns it on with no idea when it runs. -->
+  <h3 id="relinkback">Relinked files go back too</h3>
+  <p>Files you move into <code>_OFFLINE</code> – from the <strong>Offline</strong> chip or the Handover
+  check – go back to the bin they came from once you relink them in Premiere. Trace+ notices on its
+  next scan (within a couple of minutes, or straight away if you press Re-scan or open the Project
+  view). <strong>Settings ▸ Put relinked files back automatically</strong> is on by default: it only
+  undoes a move whose reason has gone, and only for files Trace+ filed itself. Turn it off and they
+  wait in <code>_OFFLINE</code> until you press <strong>Put back</strong>.
+  <code>_OFFLINE</code> only ever takes offline files, so nothing online can be sent there and bounced
+  straight back.</p>
+
   <h3>Or let it happen on its own</h3>
   <p><strong>Settings ▸ Put used clips back ▸ Auto</strong> does the same thing without the press:
   when a clip in the archive turns up on a timeline again, it goes straight back to the bin it came
   from.</p>
   <ul>
-    <li><strong>It is off by default, and that is deliberate.</strong> It is the only setting in the
-      panel that writes to your project without a press, and a panel that rearranges a Project panel
-      you did not ask it to rearrange is one you stop trusting. Turning it on is a choice you make
-      once.</li>
+    <li><strong>It is off by default, and that is deliberate.</strong> It second-guesses your edit,
+      and a panel that rearranges a Project panel you did not ask it to rearrange is one you stop
+      trusting. Turning it on is a choice you make once.</li>
     <li><strong>It only ever moves what Trace+ filed.</strong> Same contract as the button – nothing
       outside <code>_UNUSED</code> is touched, ever.</li>
     <li><strong>It runs whatever view you are in.</strong> It used to need All media open, which
@@ -1285,10 +1294,12 @@
       MULTICAM tags, and lights while they are hidden. See
       <a href="#rowlabels">What each row is</a>.</td></tr>
     <tr><td><strong>Put used clips back</strong></td><td><strong>Auto</strong> or
-      <strong>Manual</strong>. Auto is the only thing in the panel that writes to your project
-      without a press: when a clip you filed into <code>_UNUSED</code> is cut back into a timeline,
-      it returns to the bin it came from. Off by default – see
+      <strong>Manual</strong>. When a clip you filed into <code>_UNUSED</code> is cut back into a
+      timeline, Auto returns it to the bin it came from. Off by default – see
       <a href="#putback">Putting it back</a>.</td></tr>
+    <tr><td><strong>Put relinked files back</strong></td><td>On by default. A file Trace+ filed into
+      <code>_OFFLINE</code> goes back to its bin once you relink it – see
+      <a href="#relinkback">Relinked files go back too</a>.</td></tr>
     <tr><td><strong>Marker colour</strong></td><td>Premiere's own colour by default – press a swatch
       to change it, and the name of the one you are on is written beside them. Choosing a colour
       costs a second undo step per sequence, and the panel says so where the choice is made.</td></tr>
