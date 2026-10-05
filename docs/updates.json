@@ -1,10 +1,16 @@
 {
-  "latest": "1.9.3",
+  "latest": "1.10.0",
   "released": "2026-10-05",
-  "headline": "The Handover check no longer asks you to fix Premiere's own placeholders.",
+  "headline": "A tidier Project view, from beta feedback – with lengths, a way back and the hidden shortcuts on show.",
   "url": "https://nkcourses.github.io/traceplus-updates/#history",
   "notes": [
-    "A placeholder made with File › New › Offline File is no longer counted as an offline file to fix – nothing went missing. It is named in Copy report instead",
-    "The offline line's i explains the difference from the Offline chip's number, and that relinked files go back to their bins by themselves"
+    "See how long your media is: the whole project beside Project status, used and not used on the switch, and every file beside its bin",
+    "Point at a row for Source and Find buttons – each tip names its shortcut, and Settings › Display › Hover tips turns the tips off",
+    "Project status › before a clip or sequence name takes you back to where you were",
+    "A second tour, for the Project view, plays the first time you open it",
+    "The Project view's title now reads Project status",
+    "Clip tags and Summary + bars have moved out of Filters into Settings › Display",
+    "The Trace+ logo is gone from the top of the panel, and from Settings",
+    "The Handover check is leaving Trace+ to become its own panel. Offline files still go to _OFFLINE and back to their bins once relinked"
   ]
 }

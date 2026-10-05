@@ -266,7 +266,6 @@
   <a href="#unused">What counts as unused</a>
   <a href="#weight">How much disk space</a>
   <a href="#duplicates">Duplicates and empty bins</a>
-  <a href="#handover">Handover check</a>
   <a href="#offline">Offline media</a>
   <a href="#search">Searching by name</a>
 
@@ -640,6 +639,12 @@
     <em>no</em> timeline is not.</p>
   </div>
 
+  <h3 id="length">How long it all is</h3>
+  <p>Beside <strong>Project status</strong> is the length of every media file in the project, used or
+  not. Each half of the switch shows its own length under the file count, the list's heading shows
+  the length of what is listed, and every row shows its file's length beside its bin. Lengths are
+  read once per set of media, like the sizes, so a re-scan that changes nothing costs nothing.</p>
+
   <h2 id="weight">How much disk space it would free</h2>
   <p>Under the list, Trace+ reports what the unused media comes to <strong>on disk</strong> – and
   draws the whole project as two bars: how much of the weight is dead, and what the weight actually
@@ -704,47 +709,6 @@
     <p><b>Sequences count as contents.</b> A bin holding one sequence is not empty, however much it
     looks like it.</p>
   </div>
-
-  <h2 id="handover">Handover check</h2>
-  <p class="lead">Before you send a project to another editor, press <strong>Handover</strong> in the
-  Project view. It checks that everything the project needs will travel with its folder.</p>
-
-  <p>The chip says how many things there are to fix, or <strong>Ready</strong>. Open it and you get
-  one answer at the top, then one line per check:</p>
-  <ul>
-    <li><strong>Files outside the edit folder</strong>, grouped by where they are: on your Desktop,
-      in Downloads, in a cloud-sync folder (Dropbox, Google Drive, iCloud, OneDrive), on another drive,
-      or elsewhere on the same drive – with what each group weighs.</li>
-    <li><strong>Offline files</strong> – anything Premiere cannot find. A placeholder made with
-      <strong>File &gt; New &gt; Offline File</strong> is not counted: nothing went missing, so it is
-      named in the report instead.</li>
-    <li><strong>Proxies outside the folder</strong> – a proxy left on your own drive is easy to miss.</li>
-  </ul>
-  <p>Press a line to see its files, each with its full path. Tick them and use the usual buttons:
-  label them, copy the list, or press <strong>Move</strong> to gather them into a bin of their own:
-  <code>_TO COLLECT</code> for files outside the folder, <code>_OFFLINE</code> for offline ones.
-  Files used in the edit move too, and nothing is coloured – these bins are a to-do list, not
-  the <code>_UNUSED</code> archive.</p>
-
-  <h3>Which folder is the edit folder?</h3>
-  <p>The folder your media is in. Trace+ starts at the folder your project file is saved in and
-  climbs up to 3 levels to the first folder that holds at least half the project's media – so a
-  project file kept in <code>Job/00 PROJECTS/PREMIERE</code> is checked against <code>Job</code>.
-  It never climbs as far as a drive, your home folder, Desktop, Documents or a cloud-sync folder's
-  top, which would let everything pass. The answer says how the folder was found. If it is wrong,
-  press <strong>Change</strong> and pick the job folder yourself – Trace+ remembers it for that
-  project, and <strong>Reset</strong> goes back to the folder it found. Colour mattes, titles and
-  other items made inside Premiere have no file, so they are never counted. An unsaved project
-  has no folder yet, so save it first.</p>
-
-  <h3>Fixing what it finds</h3>
-  <p>Trace+ never moves a file on your disk. To bring strays into the folder, use Premiere's
-  <strong>File &gt; Project Manager &gt; Collect Files and Copy to New Location</strong>, or copy
-  them in yourself and relink – ticking them into <code>_TO COLLECT</code> first puts them all in one
-  place. For offline files, open that line, tick <strong>All</strong>, press
-  <strong>Move to _OFFLINE</strong>, then in Premiere select that bin's contents, right-click and
-  choose <strong>Link Media</strong>.</p>
-  <p><strong>Copy report</strong> gives you the whole list as text, ready to send with the project.</p>
 
   <h2 id="offline">Offline media</h2>
   <p class="lead">The <strong>Offline</strong> chip is not a relink tool, and that is deliberate –
@@ -903,9 +867,9 @@
   <p>Most of the time you are reading the list rather than narrowing it, and the chips are two rows
   of screen you are not using. The <strong>funnel</strong> beside the view's name folds them away –
   in a sequence and in All media both.</p>
-  <p>It is a separate control from the fold beside it, which hides the summary block, because
-  keeping the chips while folding the summary is a real thing to want on a long list of unused
-  media.</p>
+  <p>The summary block – the used and not used totals, the chips and the media type bar – folds
+  away separately, in <strong>Settings ▸ Display ▸ Summary + bars</strong>, because keeping the
+  filters while folding the summary is a real thing to want on a long list of unused media.</p>
   <div class="note">
     <p><b>If a filter is still on, one dim line says which.</b> Folding a chip row while one of its
     chips is switched on would otherwise leave a list that is short for a reason you cannot see –
@@ -1023,11 +987,9 @@
   the row rather than reporting a number that is too low and letting you archive the interview
   audio.</p>
 
-  <p>The <strong>tag button</strong> in the toolbar turns them off – the luggage tag, next to the
-  filter funnel. On a narrow dock the tag and the filename compete for the same forty characters,
-  which is why it is a switch and not a decision; it sits on the toolbar rather than in Settings
-  because it is a thing you flick, not a thing you set once. Like the folds beside it, it
-  <strong>lights while it is hiding something</strong>.</p>
+  <p><strong>Settings ▸ Display ▸ Clip tags</strong> turns them off. On a narrow dock the tag and
+  the filename compete for the same forty characters, which is why it is a switch. While they are
+  hidden, the Filters button counts it, so the list never changes without saying why.</p>
 
   <figure>
     <img src="assets/plus-tags.gif" alt="A list of media in Trace+ with a coloured VIDEO, AUDIO or STILL tag on every row, then the tag button in the toolbar pressed – the tags go, the names and counts stay, and the button lights.">
@@ -1148,8 +1110,7 @@
        says so; documentation that skipped it would leave the one person who
        turns it on with no idea when it runs. -->
   <h3 id="relinkback">Relinked files go back too</h3>
-  <p>Files you move into <code>_OFFLINE</code> – from the <strong>Offline</strong> chip or the Handover
-  check – go back to the bin they came from once you relink them in Premiere. Trace+ notices on its
+  <p>Files you move into <code>_OFFLINE</code> – from the <strong>Offline</strong> chip – go back to the bin they came from once you relink them in Premiere. Trace+ notices on its
   next scan (within a couple of minutes, or straight away if you press Re-scan or open the Project
   view). <strong>Settings ▸ Put relinked files back automatically</strong> is on by default: it only
   undoes a move whose reason has gone, and only for files Trace+ filed itself. Turn it off and they
@@ -1291,10 +1252,12 @@
     <tr><td><strong>Clip labels</strong></td><td>Shows or hides each row's existing label – the
       readout. Two different settings on purpose: wanting to see the organisation you already did,
       without the temptation to change it, is a real preference.</td></tr>
-    <tr><td><strong>Tags</strong></td><td><em>Not in Settings – it is the tag button in the
-      toolbar</em>, next to the filter funnel. It shows or hides the VIDEO / AUDIO / STILL / NEST /
-      MULTICAM tags, and lights while they are hidden. See
-      <a href="#rowlabels">What each row is</a>.</td></tr>
+    <tr><td><strong>Clip tags</strong></td><td>Display. Shows or hides the VIDEO / AUDIO / STILL /
+      NEST / MULTICAM tags. See <a href="#rowlabels">What each row is</a>.</td></tr>
+    <tr><td><strong>Summary + bars</strong></td><td>Display. In the Project view, shows or hides the
+      totals, the chips and the media type bar above the list, for this session.</td></tr>
+    <tr><td><strong>Hover tips</strong></td><td>Display. The tips that appear when you point at a
+      button – the status-line help and the Source / Find tips on a row. On by default.</td></tr>
     <tr><td><strong>Put used clips back</strong></td><td><strong>Auto</strong> or
       <strong>Manual</strong>. When a clip you filed into <code>_UNUSED</code> is cut back into a
       timeline, Auto returns it to the bin it came from. Off by default – see
@@ -1314,6 +1277,15 @@
     above them said – so the bar went back to appearing when there is a selection and nowhere else.
     In sequence mode it colours the clips you have ticked; in All media, the files.</p>
   </div>
+
+  <h3>Source and Find, on every row</h3>
+  <p>Point at a row in the Project view and two buttons appear in place of its count:
+  <strong>Source</strong> opens the clip in the Source Monitor, and <strong>Find</strong> copies its
+  name for the Project panel's Find box. Each one's tip names its shortcut – <kbd>Shift</kbd>-click
+  and <kbd>Alt</kbd>-click do the same from anywhere on the row. <strong>Settings ▸ Display ▸ Hover
+  tips</strong> turns the tips off.</p>
+  <p><strong>Getting back.</strong> Click a row and Trace+ jumps to the sequence that uses it most.
+  <strong>Project status ›</strong> appears before the name there, and one press takes you back.</p>
 
   <h2 id="gestures">Every gesture</h2>
   <table>
@@ -1366,8 +1338,9 @@
   updates</strong> at the bottom of that window asks again and shows the answer in its place.</p>
   <p><strong>☰ &gt; Help &amp; licence…</strong> shows the version you are running – the first thing to
   quote if you report a problem – along with your licence and a link back to this site.</p>
-  <p><strong>☰ &gt; Tour</strong> re-opens the short tour that runs the first time you open the
-  panel.</p>
+  <p><strong>☰ &gt; Tour</strong> plays the tour for the view you are in. There are 2: one for the
+  Active cut, which runs the first time you open the panel, and one for the Project view, which runs
+  the first time you open that.</p>
 
   <h2 id="report">The scan report</h2>
   <p><strong>☰ &gt; Scan report</strong> prints exactly what the panel did: how many sequences and
