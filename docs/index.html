@@ -320,7 +320,7 @@
   </div>
 
   <figure>
-    <img src="assets/plus-unused.gif" alt="Trace+ switched from Active cut to Project, showing 61.9 GB used and 141 GB not used, with Imported twice and Empty bins beside them, then the not used side pressed and the unused files listed.">
+    <img src="assets/plus-unused.gif" alt="Trace+ switched from Active cut to Project, showing 61.9 GB used and 141 GB not used, with Duplicate imports and Empty bins beside them, then the not used side pressed and the unused files listed.">
     <figcaption>Press <strong>Project</strong>. Trace+ reads every bin – not just the timelines – and
       says how much of the project your cuts never use.</figcaption>
   </figure>
@@ -490,7 +490,13 @@
   </figure>
   <p><strong>Build a sequence of N spans</strong> turns the list into something you can scrub: it
   makes a subclip of each unused part and lays them end to end in a new sequence, named
-  <em>Unused spans · </em> and the clip's name, then opens it. It never touches the file.</p>
+  <em>Unused spans · </em> and the clip's name, then opens it. The sequence and its subclips go into
+  a sub-bin named for the clip, <code>_STRINGOUTS / Interview_A_STRINGOUT</code> – with
+  <code>_STRINGOUTS</code> inside the clip's bin, or at the top of the project if
+  <strong>Settings ▸ Built sequences land</strong> says <strong>Top</strong> – so they never clutter
+  the bin you are working from, and a second build from the same clip lands beside the first. It is
+  3 undo steps (the subclips, filing them, the sequence), plus one for each bin it has to make: 2 the
+  very first time, 1 for a clip it has not built from before. It never touches the file.</p>
   <ul>
     <li><strong>Click a row</strong> to open that clip in the Source Monitor <strong>marked to that
       span</strong> – the clip's in and out points are set to the unused stretch, ready to drag
@@ -586,7 +592,12 @@
     <li><strong>Build a stringout</strong> lays every clip on the list you have open end to end in a
       new sequence and opens it. From <em>not in this cut</em> it is everything left to try; from
       <em>in this cut</em> it is the selects the cut already uses. The sequence is named for the list
-      and the bin it came from, and it is one step you can undo.</li>
+      and the bin it came from, and it goes into a sub-bin named for that bin,
+      <code>_STRINGOUTS / Interviews_STRINGOUT</code>, with <code>_STRINGOUTS</code> inside that bin – or
+      at the top of the project, if <strong>Settings ▸ Built sequences land</strong> says
+      <strong>Top</strong> or you selected more than one bin (then the sub-bin is named for the first
+      one). Only the sequence goes there – the clips stay where they are. It is one step you can
+      undo, plus one for each bin it has to make: 2 the very first time, 1 for a new bin.</li>
     <li>The new sequence is a cut like any other, so the <a href="#sequence">sequence view</a> takes
       over: <strong>Select all</strong> selects every clip in it, the colour chip labels them all, and
       the marker button puts a marker across every use. See <a href="#labels">Colour labels</a> and
@@ -594,12 +605,24 @@
     <li>The Media filter (All, Video, Audio, Stills) works in a bin too, and can be pinned there
       like anywhere else.</li>
   </ul>
+  <div class="note">
+    <p><b>A stringout does not count as using a clip.</b> Anything in a <code>_STRINGOUTS</code> bin
+    is something you built to look at, not a cut, so building a stringout of <em>not in this
+    cut</em> does not empty that list. A clip that has only ever been laid out in a stringout says
+    <strong>only in a stringout</strong> instead of <strong>never used</strong>. A stringout is never
+    taken as the cut to compare with: building one opens it, and the bin view keeps comparing with
+    the cut you had open before. The exception: drop a stringout into a real sequence and it is part
+    of your edit, so its clips count as used.</p>
+  </div>
 
   <h2 id="project">The whole project</h2>
   <p>Press <strong>Project</strong> – the clapper-board button – with nothing selected. Trace+ walks
   every bin, measures every media file, and gives you the lot.</p>
   <p>The switch above the list flips between <strong>Used</strong> and <strong>Not used</strong>.
-  Used is the default because it is the larger and less alarming half.</p>
+  Used is the default because it is the larger and less alarming half. Uses inside a
+  <code>_STRINGOUTS</code> sequence do not count, so a file you have only laid out in a stringout is
+  on the <strong>Not used</strong> side, tagged <strong>STRINGOUT ONLY</strong>. In a clip's own list
+  of uses, <strong>Hide old</strong> folds stringouts away with the old sequences.</p>
   <h3>The filters</h3>
   <table>
     <tr><th>Control</th><th>What it does</th></tr>
@@ -670,8 +693,9 @@
   <h2 id="duplicates">Duplicates and empty bins</h2>
   <p>Two more questions come free off the same walk, and both are end-of-job tidying:</p>
   <ul>
-    <li><strong>Imported more than once</strong> – the same file sitting in the project two or three
-      times over. Usually harmless, occasionally the reason two editors' versions disagree.</li>
+    <li><strong>Duplicate imports</strong> – the same file sitting in the project two or three
+      times over, each row saying how many items it has. Usually harmless, occasionally the reason
+      two editors' versions disagree.</li>
     <li><strong>Empty bins</strong> – and "empty" means the whole subtree, not just childless. A bin
       holding four bins that are themselves empty is the emptiest thing in the project, and it is
       reported as one row rather than making you delete the leaves four times over.</li>
@@ -680,6 +704,11 @@
   <strong>Remove N spare copies</strong>: it removes the project items that point at a file another
   item already points at. The file on your disk is never touched, every media file always keeps at
   least one item, and it is one undo step for the lot.</p>
+  <p><strong>Or file them away.</strong> Tick rows in Duplicate imports and <strong>Move</strong>
+  files them into <code>_DUPLICATE IMPORTS</code> rather than <code>_UNUSED</code>, the way the
+  Offline list files into <code>_OFFLINE</code>. Only files nothing uses can move – the spare copies
+  of a file that is in your cut are what <strong>Remove N spare copies</strong> is for – and
+  <strong>Put back</strong> brings them home like anything else Trace+ filed.</p>
 
   <div class="note">
     <p><b>It leaves other parts of a file alone, and says so on screen.</b> Premiere has no way to
@@ -737,8 +766,8 @@
   <h3>Reading them</h3>
   <p>Every row carries a coloured bar beside its name – the same label the Project panel draws in its
   own colour column. It is a readout, not a control: pressing it does nothing, because the swatch bar
-  is the one way to change a label. Turn it off with <strong>☰ &gt; Settings</strong> &gt;
-  <strong>Clip labels</strong>.</p>
+  is the one way to change a label. It is always on: the setting that hid it was removed in
+  October 2026.</p>
   <h3>Setting them</h3>
   <p>The swatch bar sits under the summary. In the project view it labels everything ticked; with a
   clip selected it labels that clip. Fifteen colours, read from Premiere's own list at run time.</p>
@@ -798,7 +827,7 @@
     <li><strong>Used 2+</strong> – cut in twice or more, counting instances rather than sequences.
         It cycles: 2+ → 3+ → 5+ → off, skipping any step that would empty the list</li>
     <li><strong>Offline</strong> – the list a relink session starts from</li>
-    <li><strong>Duplicates</strong> – files more than one project item points at</li>
+    <li><strong>Duplicate imports</strong> – files more than one project item points at</li>
     <li><strong>Archived only</strong> – used, but only in cuts you have archived</li>
   </ul>
 
@@ -987,7 +1016,7 @@
   the row rather than reporting a number that is too low and letting you archive the interview
   audio.</p>
 
-  <p><strong>Settings ▸ Display ▸ Clip tags</strong> turns them off. On a narrow dock the tag and
+  <p><strong>Settings ▸ Panel ▸ Clip tags</strong> turns them off. On a narrow dock the tag and
   the filename compete for the same forty characters, which is why it is a switch. While they are
   hidden, the Filters button counts it, so the list never changes without saying why.</p>
 
@@ -1228,9 +1257,11 @@
 
   <h2 id="settings">Every setting</h2>
   <p><strong>☰ &gt; Settings</strong>. The window sizes itself to what is in it, and everything is
-  saved for next time. <strong>Point at any setting and the strip along the bottom says what it
-  does</strong> – the explanations live in one place instead of appearing as a tooltip over the
-  control you are trying to read.</p>
+  saved for next time. <strong>Point at any setting, or a group heading, and the strip along the
+  bottom says what it does</strong> – the explanations live in one place instead of appearing as a
+  tooltip over the control you are trying to read. The <strong>Panel</strong> tab shows a clip row
+  and one of its uses as they will look in the list, and it changes as you change the settings
+  above it.</p>
   <p><b>Text size is not in Settings.</b> It is a slider at the right-hand end of the status strip along the bottom of the panel –
   <code>Aa</code> at each end, four steps. Click anywhere on the rail, or focus it and use the arrow
   keys; the list holds its place while the size changes, so you do not lose where you were. A panel
@@ -1247,12 +1278,9 @@
       <a href="#detail">above</a>.</td></tr>
     <tr><td><strong>Times</strong></td><td>Timecode – what you say out loud – or frames, which is
       what a VFX list asks for. Applies to <strong>Copy list</strong> too.</td></tr>
-    <tr><td><strong>Label picker</strong></td><td>Shows or hides the swatch bar you press to apply a
+    <tr><td><strong>Label picker</strong></td><td><strong>Show</strong> or <strong>Hide</strong> – the swatch bar you press to apply a
       colour label.</td></tr>
-    <tr><td><strong>Clip labels</strong></td><td>Shows or hides each row's existing label – the
-      readout. Two different settings on purpose: wanting to see the organisation you already did,
-      without the temptation to change it, is a real preference.</td></tr>
-    <tr><td><strong>Clip tags</strong></td><td>Display. Shows or hides the VIDEO / AUDIO / STILL /
+    <tr><td><strong>Clip tags</strong></td><td>How rows look. Shows or hides the VIDEO / AUDIO / STILL /
       NEST / MULTICAM tags. See <a href="#rowlabels">What each row is</a>.</td></tr>
     <tr><td><strong>Summary + bars</strong></td><td>Display. In the Project view, shows or hides the
       totals, the chips and the media type bar above the list, for this session.</td></tr>
@@ -1262,6 +1290,12 @@
       <strong>Manual</strong>. When a clip you filed into <code>_UNUSED</code> is cut back into a
       timeline, Auto returns it to the bin it came from. Off by default – see
       <a href="#putback">Putting it back</a>.</td></tr>
+    <tr><td><strong>Built sequences land</strong></td><td><strong>Beside</strong> or
+      <strong>Top</strong>. In the <strong>Stringout sequences</strong> group. Stringouts and
+      unused-span sequences go into <code>_STRINGOUTS</code>, each in a sub-bin named for the clip or
+      bin it was built from (<code>Interview_A_STRINGOUT</code>): inside the bin the clips came from,
+      or at the top level of the project so they all sit together. The green line under it shows
+      where the next one will go.</td></tr>
     <tr><td><strong>Put relinked files back</strong></td><td>On by default. A file Trace+ filed into
       <code>_OFFLINE</code> goes back to its bin once you relink it – see
       <a href="#relinkback">Relinked files go back too</a>.</td></tr>
@@ -1413,7 +1447,8 @@
     <li><strong>Move to _UNUSED</strong> and <strong>Put back</strong> (and automatic put-back, which is
       off until you switch it on)</li>
     <li>removing spare copies of a file imported twice, and removing empty bins</li>
-    <li>the sequences it builds: stringouts and the unused parts of a clip</li>
+    <li>the sequences it builds: stringouts and the unused parts of a clip, and the
+      <code>_STRINGOUTS</code> bin they go into</li>
   </ul>
   <p>Every one is an ordinary Premiere edit that <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>-Z undoes, and none of
   them touches a file on your disk.</p>
