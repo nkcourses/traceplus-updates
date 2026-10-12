@@ -913,8 +913,10 @@
   unused list is the other job: you have looked at a row, decided about it, and you never want to
   see it again this afternoon.</p>
 
-  <p>Every row carries a small <strong>eye</strong> at its right end. Press it and the row leaves
-  the list. Tick several rows first and pressing any ticked row's eye hides <strong>all of
+  <p>The <strong>eye</strong> is off until you want it: open <strong>Filters</strong> and pin
+  <strong>Show / hide eye</strong> (under <strong>Rows</strong>), and every row in every view carries
+  a small eye beside its tick box. Unpin it again from <strong>Panel</strong> in the same menu.
+  Press a row's eye and the row leaves the list. Tick several rows first and pressing any ticked row's eye hides <strong>all of
   them</strong> &mdash; the tooltip changes to say so before you press, because a control that
   quietly does six things while saying &ldquo;this row&rdquo; is a surprise you cannot undo by
   pressing it again.</p>
@@ -932,7 +934,8 @@
     <p><b>A strip says how many are hidden, and carries the way back.</b> It is on screen whenever
     anything is hidden, in every state, because a hand-hide leaves nothing else on screen to explain
     a short list. <em>Unhide all</em> is on the strip; the <strong>Hidden</strong> chip brings them
-    back dimmed so you can restore them one at a time.</p>
+    back dimmed so you can restore them one at a time. Both work with the eye unpinned; restoring one
+    row at a time needs the eye pinned.</p>
     <p><b>It is per section, in the project view.</b> Hiding is about the list you are working
     through, so it applies to the sections of the project view rather than to a clip's uses.</p>
   </div>
@@ -1285,7 +1288,7 @@
     <tr><td><strong>Summary + bars</strong></td><td>Display. In the Project view, shows or hides the
       totals, the chips and the media type bar above the list, for this session.</td></tr>
     <tr><td><strong>Hover tips</strong></td><td>Display. The tips that appear when you point at a
-      button – the status-line help and the Source / Find tips on a row. On by default.</td></tr>
+      button – the status-line help and the Source tip on a row. On by default.</td></tr>
     <tr><td><strong>Put used clips back</strong></td><td><strong>Auto</strong> or
       <strong>Manual</strong>. When a clip you filed into <code>_UNUSED</code> is cut back into a
       timeline, Auto returns it to the bin it came from. Off by default – see
@@ -1312,12 +1315,11 @@
     In sequence mode it colours the clips you have ticked; in All media, the files.</p>
   </div>
 
-  <h3>Source and Find, on every row</h3>
-  <p>Point at a row in the Project view and two buttons appear in place of its count:
-  <strong>Source</strong> opens the clip in the Source Monitor, and <strong>Find</strong> copies its
-  name for the Project panel's Find box. Each one's tip names its shortcut – <kbd>Shift</kbd>-click
-  and <kbd>Alt</kbd>-click do the same from anywhere on the row. <strong>Settings ▸ Display ▸ Hover
-  tips</strong> turns the tips off.</p>
+  <h3>Source, on every row</h3>
+  <p>Point at a row in the Project view and <strong>Source</strong> appears in place of its count. It
+  opens the clip in the Source Monitor; <kbd>Shift</kbd>-click does the same from anywhere on the row,
+  and <kbd>Alt</kbd>-click copies the clip's name for the Project panel's Find box.
+  <strong>Settings ▸ Display ▸ Hover tips</strong> turns the tips off.</p>
   <p><strong>Getting back.</strong> Click a row and Trace+ jumps to the sequence that uses it most.
   <strong>Project status ›</strong> appears before the name there, and one press takes you back.</p>
 
@@ -1337,8 +1339,10 @@
       button beside the bin path does the same thing</td></tr>
     <tr><td>Click a row in the <strong>Project</strong> view</td><td>Opens the cut that uses it – the busiest
       one, with the status line saying which and how many others there were</td></tr>
-    <tr><td>The tick box on a clip row</td><td>Selects every use of that clip in the timeline at once.
-      Half-filled means some of its uses are selected, not all</td></tr>
+    <tr><td>The tick box on a clip row</td><td>Ticks every use of that clip at once and lights the row
+      a lighter grey; press it again to untick them. Half-filled means some of its uses are ticked,
+      not all. It is the clip row's only Select all – the sequence headings and the bottom bar keep
+      theirs</td></tr>
     <tr><td>The arrows</td><td>Step through every use on screen</td></tr>
   </table>
   <p><kbd>Shift</kbd> and double-click do the same thing deliberately, so the Source Monitor is
