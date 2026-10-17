@@ -483,7 +483,12 @@
   <h3 id="unusedparts">The parts you never used</h3>
   <p><strong>Unused</strong> lists the spans of the source that nothing points at – the gaps
   <em>between</em> the uses. Where each one starts, how long it is, and what share of the file it is.
-  On a forty-minute interview that is usually most of it.</p>
+  On a forty-minute interview that is usually most of it. Point at a span and the
+  <strong>Source</strong> icon appears at the right-hand end, as on every other row: press it (or the
+  row) to open the clip in the Source Monitor with its in and out set to that span.</p>
+  <p>A clip that is not cut into any sequence shows its never-used span straight away, under one
+  line saying so – no scope buttons and no arrows, because there are no uses to narrow or step
+  through.</p>
   <figure>
     <img src="assets/plus-spans.gif" alt="An interview clip in Trace+ showing 2 uses in this cut and 11s never used, the never used pane pressed, then Build a sequence of 3 spans pressed and a new sequence opening with the 3 unused parts laid end to end.">
     <figcaption>Not where you used it – <strong>what is left</strong>, and one press to cut with it.</figcaption>
@@ -497,6 +502,13 @@
   the bin you are working from, and a second build from the same clip lands beside the first. It is
   3 undo steps (the subclips, filing them, the sequence), plus one for each bin it has to make: 2 the
   very first time, 1 for a clip it has not built from before. It never touches the file.</p>
+  <p><b>Cut one of those subclips into your edit and its span stops being never used.</b> The
+  coverage bar, the never-used spans and the totals count every use of the clip's own subclips and of
+  any other import of the same file – except a use inside a <code>_STRINGOUTS</code> sequence, so
+  building the spans sequence never closes the spans it shows you. With
+  <strong>Settings ▸ Put used clips back automatically</strong> on, that subclip also moves out of
+  <code>_STRINGOUTS</code> and into the bin its master clip is in (see
+  <a href="#putback">Putting it back</a>).</p>
   <ul>
     <li><strong>Click a row</strong> to open that clip in the Source Monitor <strong>marked to that
       span</strong> – the clip's in and out points are set to the unused stretch, ready to drag
@@ -513,7 +525,7 @@
   <p><b>Every gap is listed, however short.</b> On a heavily cut clip that means a lot of very small
   ones; the feature is for long masters and interviews, where the answer is measured in minutes.</p>
 
-  <p>The <strong>colour label swatches</strong> under the summary label the selected clip in one
+  <p>The <strong>colour label swatches</strong> in the bar at the foot of the panel label the selected clip in one
   press. See <a href="#labels">Colour labels</a>.</p>
 
   <h2 id="timeline">Clips you select in the timeline</h2>
@@ -521,7 +533,8 @@
   looks familiar, and you want to know where else it is – without stopping, finding the clip in the
   Project panel, and clicking it there. Press <strong>Timeline</strong> and the sequence asks for you.</p>
   <p>By default Trace+ answers about whatever you click in the <strong>Project panel</strong>. Press
-  <strong>Timeline</strong> in the toolbar – the button beside <strong>Project</strong> – and it answers about
+  the <strong>Timeline</strong> icon in the toolbar – the switch just left of <strong>Filters</strong>, which lights
+  purple while it is on – and it answers about
   clips you click <strong>in a sequence</strong> as well. Not instead: both keep working, and whichever you
   touched last is the one on screen.</p>
   <p>It is off until you press it, it remembers the setting, and pressing it reads whatever is
@@ -599,7 +612,7 @@
       one). Only the sequence goes there – the clips stay where they are. It is one step you can
       undo, plus one for each bin it has to make: 2 the very first time, 1 for a new bin.</li>
     <li>The new sequence is a cut like any other, so the <a href="#sequence">sequence view</a> takes
-      over: <strong>Select all</strong> selects every clip in it, the colour chip labels them all, and
+      over: the tick box in its column headings selects every clip in it, the colour chip labels them all, and
       the marker button puts a marker across every use. See <a href="#labels">Colour labels</a> and
       <a href="#markers">Markers</a>.</li>
     <li>The Media filter (All, Video, Audio, Stills) works in a bin too, and can be pinned there
@@ -623,6 +636,10 @@
   <code>_STRINGOUTS</code> sequence do not count, so a file you have only laid out in a stringout is
   on the <strong>Not used</strong> side, tagged <strong>STRINGOUT ONLY</strong>. In a clip's own list
   of uses, <strong>Hide old</strong> folds stringouts away with the old sequences.</p>
+  <p>Each row's count says how many times the file is used. Point at the count to hear how many
+  sequences that is; with Detail on <strong>Detailed</strong> it is also on the bin line under the
+  name. On a narrow dock the type tag becomes a small Video, Audio or Stills icon so the names keep
+  their room.</p>
   <h3>The filters</h3>
   <table>
     <tr><th>Control</th><th>What it does</th></tr>
@@ -632,11 +649,13 @@
       side; the count in the label always matches the rows you will get.</td></tr>
     <tr><td><strong>Offline</strong></td><td>Appears only when something is offline. See
       <a href="#offline">below</a>.</td></tr>
-    <tr><td><strong>✓ All</strong></td><td>In each section's header – ticks every row in that
-      section. Press it again to clear them.</td></tr>
+    <tr><td><strong>The heading's tick box</strong></td><td>In the column headings, in line with the
+      rows' boxes – ticks every row in the list. A bar in it means some are ticked, a tick means all
+      are. Press it again to clear them. Each section under the list has its own at the start of its
+      heading.</td></tr>
   </table>
-  <p>Every section has its own <strong>✓ All</strong> because the sections answer different
-  questions: somebody labelling the duplicates does not want the unused rows ticked as well.</p>
+  <p>Every section has its own tick box because the sections answer different questions: somebody
+  labelling the duplicates does not want the unused rows ticked as well.</p>
 
   <h2 id="unused">What counts as unused</h2>
   <p>This is the number the whole panel rests on, so it is worth knowing exactly what it means.</p>
@@ -694,8 +713,10 @@
   <p>Two more questions come free off the same walk, and both are end-of-job tidying:</p>
   <ul>
     <li><strong>Duplicate imports</strong> – the same file sitting in the project two or three
-      times over, each row saying how many items it has. Usually harmless, occasionally the reason
-      two editors' versions disagree.</li>
+      times over. Each row says how many spare copies there are and what happens to them –
+      <em>1 spare · can go</em>, or <em>in use</em>, or <em>other part</em> when a copy covers a
+      different part of the file. Point at it for the whole sentence. Usually harmless, occasionally
+      the reason two editors' versions disagree.</li>
     <li><strong>Empty bins</strong> – and "empty" means the whole subtree, not just childless. A bin
       holding four bins that are themselves empty is the emptiest thing in the project, and it is
       reported as one row rather than making you delete the leaves four times over.</li>
@@ -769,7 +790,7 @@
   is the one way to change a label. It is always on: the setting that hid it was removed in
   October 2026.</p>
   <h3>Setting them</h3>
-  <p>The swatch bar sits under the summary. In the project view it labels everything ticked; with a
+  <p>The swatch bar sits at the foot of the panel. In the project view it labels everything ticked; with a
   clip selected it labels that clip. Fifteen colours, read from Premiere's own list at run time.</p>
   <figure>
     <img src="assets/plus-labels.gif" alt="Trace+ showing each row's existing colour label as a bar beside its name, and the swatch row underneath setting Mango on the two ticked files.">
@@ -874,8 +895,8 @@
   presses and a word.</p>
 
   <div class="note">
-    <p><b>Select all, Move to <code>_UNUSED</code> and the colour swatches act on the
-    matches.</b> That is the point of it – search <code>interview</code>, press Select all, colour
+    <p><b>The heading's tick box, Move to <code>_UNUSED</code> and the colour swatches act on the
+    matches.</b> That is the point of it – search <code>interview</code>, tick the heading's box, colour
     twelve clips in one go – but it is also the thing to be careful about. The count beside the box
     says how many the term is showing <em>before</em> you press anything, and it names what it is
     counting: files in All media, clips in a cut.</p>
@@ -892,19 +913,19 @@
     show the filters</em>. Pressing that line brings the box and the chips back together.</p>
   </div>
 
-  <h3>Folding the chips away</h3>
-  <p>Most of the time you are reading the list rather than narrowing it, and the chips are two rows
-  of screen you are not using. The <strong>funnel</strong> beside the view's name folds them away –
-  in a sequence and in All media both.</p>
+  <h3>Pinning the chips you use</h3>
+  <p>Most of the time you are reading the list rather than narrowing it, so only the filters you pin
+  sit above it – to begin with, just the Media chips and <strong>Used 2+</strong>. Every filter in the
+  <strong>Filters</strong> menu has a pin beside it: unpin one and it leaves the panel but stays in
+  the menu, pin it again and it comes back.</p>
   <p>The summary block – the used and not used totals, the chips and the media type bar – folds
   away separately, in <strong>Settings ▸ Display ▸ Summary + bars</strong>, because keeping the
   filters while folding the summary is a real thing to want on a long list of unused media.</p>
   <div class="note">
-    <p><b>If a filter is still on, one dim line says which.</b> Folding a chip row while one of its
-    chips is switched on would otherwise leave a list that is short for a reason you cannot see –
-    and pressing that line brings the chips straight back.</p>
-    <p><b>Used / Not used does not fold.</b> It is the switch between the two lists rather than a
-    filter on one of them, and a panel that folded away its own primary control would be a list
+    <p><b>Unpinning does not switch a filter off.</b> The chip moves into the Filters menu with
+    whatever state it had, so a filter that was on is still on there.</p>
+    <p><b>Used / Not used has no pin.</b> It is the switch between the two lists rather than a
+    filter on one of them, and a panel that could put away its own primary control would be a list
     nobody could change.</p>
   </div>
 
@@ -922,20 +943,22 @@
   pressing it again.</p>
 
   <figure>
-    <img src="assets/plus-hide.gif" alt="Three rows ticked in Trace+'s unused list, then the eye at the end of one of them pressed – all three leave the list and a strip appears in their place reading 3 rows hidden, with an Unhide all button.">
-    <figcaption><strong>Tick, then one press.</strong> The strip that appears in their place is the
-      point: the list is never quietly short.</figcaption>
+    <img src="assets/plus-hide.gif" alt="Three rows ticked in Trace+'s unused list, then the eye at the end of one of them pressed – all three leave the list.">
+    <figcaption><strong>Tick, then one press.</strong> The hidden-rows chip that appears at the end
+      of the filter row is the point: the list is never quietly short.</figcaption>
   </figure>
 
   <div class="note">
     <p><b>Nothing is deleted and nothing is moved.</b> Hiding is a view, not an action on your
     project &mdash; the files stay exactly where they are, and the count above the list still counts
     them.</p>
-    <p><b>A strip says how many are hidden, and carries the way back.</b> It is on screen whenever
-    anything is hidden, in every state, because a hand-hide leaves nothing else on screen to explain
-    a short list. <em>Unhide all</em> is on the strip; the <strong>Hidden</strong> chip brings them
-    back dimmed so you can restore them one at a time. Both work with the eye unpinned; restoring one
-    row at a time needs the eye pinned.</p>
+    <p><b>A chip says how many are hidden, and carries the way back.</b> Whenever a row in the
+    view you are in is hidden, a small chip sits at the end of the filter row &ndash; an eye with a
+    line through it and the count &ndash; because a hand-hide leaves nothing else on screen to explain
+    a short list. Press it and the hidden rows come back in place, dimmed and in italic, each with its
+    own purple eye: press a row's eye to bring that one back. That works with the eye column off too.
+    While they are showing the chip turns purple and <em>Unhide all</em> sits beside it; press the
+    chip again to hide them.</p>
     <p><b>It is per section, in the project view.</b> Hiding is about the list you are working
     through, so it applies to the sections of the project view rather than to a clip's uses.</p>
   </div>
@@ -945,9 +968,9 @@
   same sentence.</strong> Nine uses of one three-second cutaway and nine moments of an interview are
   opposite facts about a job, and the use count alone cannot tell them apart.</p>
 
-  <p>So when they differ, the totals line says both: <em>9 uses &middot; 4 sections &middot; 2
-  sequences</em>. Four <strong>sections</strong> means four distinct stretches of the source were
-  used; the other five uses are repeats of footage already counted.</p>
+  <p>So when they differ, the used pane says both: <em>9</em> over <em>4 sections &middot; 1m 20s</em>.
+  Four <strong>sections</strong> means four distinct stretches of the source were used; the other
+  five uses are repeats of footage already counted.</p>
 
   <p>And every use of a clip that is used more than once carries a badge saying which kind it is:</p>
 
@@ -1071,7 +1094,7 @@
     after every run.</p>
   </div>
 
-  <p>Set a colour in <strong>☰ &gt; Settings</strong> &gt; <strong>Marker colour</strong> and each
+  <p>Set a colour in <strong>☰ &gt; Settings</strong> &gt; <strong>Colours</strong> &gt; <strong>Marker colour</strong> and each
   sequence costs a <em>second</em> step, because a marker does not exist until its transaction has
   committed and its colour has to be set afterwards. On the default – Premiere's own colour – you
   pay nothing for a feature you did not ask for. Pressing the button twice never repaints the first
@@ -1126,7 +1149,8 @@
     refusal in the status line. Filing away footage from under a live edit is the one mistake this
     panel exists to prevent.</p>
   </div>
-  <p>Archived items get a <strong>tan</strong> colour label so they are obvious in the Project panel.
+  <p>Items filed into the unused bin get a <strong>tan</strong> colour label so they are obvious in the Project panel.
+  Items filed into <code>_OFFLINE</code>, <code>_DUPLICATE IMPORTS</code> or a bin you chose keep the label they had.
   Nothing is copied, nothing leaves the project, and nothing is deleted –
   <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>-Z undoes it like any other edit.</p>
 
@@ -1151,7 +1175,7 @@
   straight back.</p>
 
   <h3>Or let it happen on its own</h3>
-  <p><strong>Settings ▸ Put used clips back ▸ Auto</strong> does the same thing without the press:
+  <p>Turn on <strong>Settings ▸ Put used clips back automatically</strong> and it does the same thing without the press:
   when a clip in the archive turns up on a timeline again, it goes straight back to the bin it came
   from.</p>
   <ul>
@@ -1169,6 +1193,13 @@
       first time it looks; after that every check is free.</li>
     <li>An item that will not move is left alone and not retried, and the status line says how many.
       A tidy-up that keeps failing quietly is worse than one that does not run.</li>
+    <li><strong>Used span subclips go home too.</strong> A subclip made by <strong>Build a sequence
+      of N spans</strong> lives in <code>_STRINGOUTS</code> until you cut it into a real sequence.
+      Then it moves into the bin its master clip is in – one undo step, its colour label left as it
+      was, and the clip's <code>_STRINGOUT</code> bin stays, because the spans sequence is still in
+      it. If the master is in more than one bin, or nowhere outside <code>_STRINGOUTS</code>,
+      Trace+ cannot know which bin you mean, so it leaves the subclip where it is and the scan
+      report lists it.</li>
   </ul>
   <figure>
     <img src="assets/plus-autoback.gif" alt="18 unused files ticked in Trace+ and moved into _UNUSED, then one of them dragged from _UNUSED onto the timeline, and Trace+ filing it straight back into the B-roll bin it came from, with the used and not used totals updating.">
@@ -1203,8 +1234,8 @@
   </div>
 
   <h2 id="select">Selecting and the Source Monitor</h2>
-  <p>Everything the free panel does, unchanged. Press <strong>Select all N in this sequence</strong>
-  and every use becomes a real Premiere selection at the same moment – nudge them, delete them,
+  <p>Everything the free panel does. Tick the box in a sequence's heading and every use in it
+  becomes a real Premiere selection at the same moment – nudge them, delete them,
   apply an effect. <kbd>Shift</kbd>-click or double-click any use to open it in the Source Monitor
   with that use set as in and out.</p>
   <div class="note warn">
@@ -1242,7 +1273,7 @@
   <p><strong>☰ &gt; Settings</strong> &gt; <strong>Detail</strong> has two levels, and they change
   how tight the rows are as well as how much each one says.</p>
   <table>
-    <tr><th>Clean</th><td>Name, count and timecodes. Tighter rows, and everything you could have got
+    <tr><th>Clean</th><td>Name, count and times. Tighter rows, and everything you could have got
       by clicking is gone. For a narrow dock down the side of the screen.</td></tr>
     <tr><th>Detailed</th><td>Everything: the bin path, the coverage bar, durations and tracks, the
       source in and out of every use, the nest it came through, and the media's path on disk.</td></tr>
@@ -1250,9 +1281,10 @@
   <p>Set it to Clean on a narrow dock and Detailed when you are actually investigating something.
   It is one press either way.</p>
   <div class="note">
-    <p><b>Neither level hides the status line.</b> The strip along the bottom – how many sequences
-    were indexed and how long it took, what is being scanned right now, and the confirmation after
-    anything is moved, marked or labelled – is there at both levels. Detail is about how much each
+    <p><b>Neither level hides the status line.</b> The strip along the bottom – what is being
+    scanned right now, and the confirmation after anything is moved, marked or labelled – is there at
+    both levels. It stays quiet until something happens; how long a scan took is in
+    <strong>☰ &gt; Scan report</strong>. Detail is about how much each
     <em>row</em> says, not about how much the panel tells you.</p>
     <p>The one thing that does hide it is docking the panel very short, where there is no room for a
     strip at all.</p>
@@ -1260,7 +1292,10 @@
 
   <h2 id="settings">Every setting</h2>
   <p><strong>☰ &gt; Settings</strong>. The window sizes itself to what is in it, and everything is
-  saved for next time. <strong>Point at any setting, or a group heading, and the strip along the
+  saved for next time, the column sort and <strong>Summary + bars</strong> included.
+  <strong>Reset to defaults</strong>, at the foot of the window, puts every preference back as it
+  was on first install – your licence, the tours you have seen and the bins Trace+ has filed into
+  are kept. <strong>Point at any setting, or a group heading, and the strip along the
   bottom says what it does</strong> – the explanations live in one place instead of appearing as a
   tooltip over the control you are trying to read. The <strong>Panel</strong> tab shows a clip row
   and one of its uses as they will look in the list, and it changes as you change the settings
@@ -1273,10 +1308,9 @@
 
   <table>
     <tr><th>Setting</th><th>What it does</th></tr>
-    <tr><td><strong>Unused layout</strong></td><td>Mirror or Flat – see
-      <a href="#archive">Move to _UNUSED</a>. Mirror is the one with a way back.</td></tr>
-    <tr><td><strong>File unused into</strong></td><td>The archive bin's name. <code>_UNUSED</code> by
-      default.</td></tr>
+    <tr><td><strong>File unused into</strong></td><td><strong>Mirror</strong> or <strong>One bin</strong> – see
+      <a href="#archive">Move to _UNUSED</a>. Mirror rebuilds your bins inside <code>_UNUSED</code> and is
+      the one with a way back; One bin puts everything straight into <code>_UNUSED</code>.</td></tr>
     <tr><td><strong>Detail</strong></td><td>Clean or Detailed – see
       <a href="#detail">above</a>.</td></tr>
     <tr><td><strong>Times</strong></td><td>Timecode – what you say out loud – or frames, which is
@@ -1286,12 +1320,15 @@
     <tr><td><strong>Clip tags</strong></td><td>How rows look. Shows or hides the VIDEO / AUDIO / STILL /
       NEST / MULTICAM tags. See <a href="#rowlabels">What each row is</a>.</td></tr>
     <tr><td><strong>Summary + bars</strong></td><td>Display. In the Project view, shows or hides the
-      totals, the chips and the media type bar above the list, for this session.</td></tr>
+      totals, the chips and the media type bar above the list. Remembered next time; hiding them
+      puts the Project view back on its media list. Docked too short for the list, the panel folds
+      them by itself and brings them back when there is room.</td></tr>
     <tr><td><strong>Hover tips</strong></td><td>Display. The tips that appear when you point at a
       button – the status-line help and the Source tip on a row. On by default.</td></tr>
-    <tr><td><strong>Put used clips back</strong></td><td><strong>Auto</strong> or
-      <strong>Manual</strong>. When a clip you filed into <code>_UNUSED</code> is cut back into a
-      timeline, Auto returns it to the bin it came from. Off by default – see
+    <tr><td><strong>Put used clips back automatically</strong></td><td>Turn it on and, when a clip
+      you filed into <code>_UNUSED</code> is cut back into a timeline, it goes back to the bin it came
+      from – and a span subclip from <code>_STRINGOUTS</code> that you cut into your edit moves beside
+      its master clip. Off by default – see
       <a href="#putback">Putting it back</a>.</td></tr>
     <tr><td><strong>Built sequences land</strong></td><td><strong>Beside</strong> or
       <strong>Top</strong>. In the <strong>Stringout sequences</strong> group. Stringouts and
@@ -1316,10 +1353,16 @@
   </div>
 
   <h3>Source, on every row</h3>
-  <p>Point at a row in the Project view and <strong>Source</strong> appears in place of its count. It
-  opens the clip in the Source Monitor; <kbd>Shift</kbd>-click does the same from anywhere on the row,
+  <p>Point at any row in the Project, clip or sequence view and the <strong>Source</strong> icon (a small monitor) appears at
+  its far end. Nothing on the row moves to make room: the space is always there. It opens the clip
+  in the Source Monitor, and on a clip row in a sequence, or on a single use, it opens at that use.
+  <kbd>Shift</kbd>-click does the same from anywhere on the row,
   and <kbd>Alt</kbd>-click copies the clip's name for the Project panel's Find box.
   <strong>Settings ▸ Display ▸ Hover tips</strong> turns the tips off.</p>
+  <p><strong>Sorting.</strong> The <strong>Name</strong>, <strong>Type</strong> and <strong>Uses</strong>
+  headings over the Active cut and Project lists sort by that column; click the same heading again to
+  reverse it. The arrow shows which one is in use, and each list remembers its sort next time.
+  Duplicate imports sorts the same way, with <strong>Spare</strong> in place of Uses.</p>
   <p><strong>Getting back.</strong> Click a row and Trace+ jumps to the sequence that uses it most.
   <strong>Project status ›</strong> appears before the name there, and one press takes you back.</p>
 
@@ -1340,9 +1383,12 @@
     <tr><td>Click a row in the <strong>Project</strong> view</td><td>Opens the cut that uses it – the busiest
       one, with the status line saying which and how many others there were</td></tr>
     <tr><td>The tick box on a clip row</td><td>Ticks every use of that clip at once and lights the row
-      a lighter grey; press it again to untick them. Half-filled means some of its uses are ticked,
-      not all. It is the clip row's only Select all – the sequence headings and the bottom bar keep
-      theirs</td></tr>
+      a lighter grey; press it again to untick them. A bar in it means some of its uses are ticked,
+      not all</td></tr>
+    <tr><td>The tick box in a heading</td><td>Ticks everything that list shows – the whole cut in
+      the Active cut view, one sequence's uses under a sequence heading. <kbd>Cmd</kbd> /
+      <kbd>Ctrl</kbd>-click a sequence heading's box to add its uses to what is already ticked. A bin's
+      list has no heading, so it keeps <strong>Select all</strong> in the bar at the foot</td></tr>
     <tr><td>The arrows</td><td>Step through every use on screen</td></tr>
   </table>
   <p><kbd>Shift</kbd> and double-click do the same thing deliberately, so the Source Monitor is
