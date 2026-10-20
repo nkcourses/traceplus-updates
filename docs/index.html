@@ -1024,6 +1024,8 @@
     <li>In the <strong>Active cut</strong> view each clip's row carries the tag too: the speed when
       every use of it plays at that speed, or <strong>1 at 50%</strong> when only some do. The
       <strong>Retimed</strong> filter there lists only those clips.</li>
+    <li>On a narrow panel the Active cut shows a small amber gauge in its own column instead of the
+      tag, so every row's type icon and use count still line up. Point at the gauge for the speed.</li>
     <li>The speed Trace+ reads is the clip's own Speed/Duration setting. Speed keyframed with time
       remapping is not shown yet.</li>
   </ul>
@@ -1324,7 +1326,8 @@
       puts the Project view back on its media list. Docked too short for the list, the panel folds
       them by itself and brings them back when there is room.</td></tr>
     <tr><td><strong>Hover tips</strong></td><td>Display. The tips that appear when you point at a
-      button – the status-line help and the Source tip on a row. On by default.</td></tr>
+      button – the status-line help and the Source tip on a row – and Premiere's own grey tooltips
+      over the panel. Turn it back on and they all return. On by default.</td></tr>
     <tr><td><strong>Put used clips back automatically</strong></td><td>Turn it on and, when a clip
       you filed into <code>_UNUSED</code> is cut back into a timeline, it goes back to the bin it came
       from – and a span subclip from <code>_STRINGOUTS</code> that you cut into your edit moves beside
@@ -1341,7 +1344,9 @@
       <a href="#relinkback">Relinked files go back too</a>.</td></tr>
     <tr><td><strong>Marker colour</strong></td><td>Premiere's own colour by default – press a swatch
       to change it, and the name of the one you are on is written beside them. Choosing a colour
-      costs a second undo step per sequence, and the panel says so where the choice is made.</td></tr>
+      costs a second undo step per sequence, and the panel says so where the choice is made. The
+      crossed-out marker icon at the end of the swatches removes Trace+'s markers; point at it to read
+      what it does.</td></tr>
   </table>
 
   <div class="note">
@@ -1362,6 +1367,10 @@
   <p><strong>Sorting.</strong> The <strong>Name</strong>, <strong>Type</strong> and <strong>Uses</strong>
   headings over the Active cut and Project lists sort by that column; click the same heading again to
   reverse it. The arrow shows which one is in use, and each list remembers its sort next time.
+  Each project also remembers its own view for the session: switch to another project and back, or
+  close it and open it again, and its Project or Active cut view, tab, sort, hidden rows and ticked
+  rows are as you left them. A project you open for the first time starts clean, and a ticked row
+  that has since left the project is dropped.
   Duplicate imports sorts the same way, with <strong>Spare</strong> in place of Uses.</p>
   <p><strong>Getting back.</strong> Click a row and Trace+ jumps to the sequence that uses it most.
   <strong>Project status ›</strong> appears before the name there, and one press takes you back.</p>
