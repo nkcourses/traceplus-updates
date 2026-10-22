@@ -1,15 +1,10 @@
 {
-  "latest": "1.10.4",
-  "released": "2026-10-20",
-  "headline": "Update in one click.",
+  "latest": "1.10.5",
+  "released": "2026-10-22",
+  "headline": "Select every use of a clip in one press again.",
   "url": "https://nkcourses.github.io/traceplus-updates/#history",
   "notes": [
-    "Press Update on the update notice and Trace+ downloads the new version; Creative Cloud asks once to replace the current one, and the plugin reloads. No file to find",
-    "Clicking an unused span brings the Source Monitor to the front, even when that clip is already open in it",
-    "The unused spans no longer have their own Source Monitor button. Click the row instead: it does the same thing",
-    "The hidden-rows button now matches the other filter buttons, and reads \"2 hidden\" rather than \"2hidden\"",
-    "Less space between a clip's name and the used and never used boxes under it",
-    "The Filters menu only offers what applies to the view you are in, so Show / hide eye is gone from the clip view",
-    "The first tip of the tour is shorter"
+    "Select all is back at the bottom right of the clip view. It ticks every use of the clip in every sequence on screen, folded sequences included, and reads Deselect all once they are all ticked",
+    "The arrow on the Move bin button now sits after the bin name, like every other dropdown"
   ]
 }
