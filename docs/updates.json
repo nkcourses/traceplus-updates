@@ -1,10 +1,17 @@
 {
-  "latest": "1.10.5",
-  "released": "2026-10-22",
-  "headline": "Select every use of a clip in one press again.",
+  "latest": "1.11.0",
+  "released": "2026-11-15",
+  "headline": "See every use of a clip as a picture, including the footage you never used.",
   "url": "https://nkcourses.github.io/traceplus-updates/#history",
   "notes": [
-    "Select all is back at the bottom right of the clip view. It ticks every use of the clip in every sequence on screen, folded sequences included, and reads Deselect all once they are all ticked",
-    "The arrow on the Move bin button now sits after the bin name, like every other dropdown"
+    "Three ways to see a clip's uses, like Premiere's own: List, List with thumbnails, and Icon view. Switch with the buttons at the top right",
+    "A size slider in the bottom bar makes the thumbnails bigger or smaller, or the text in List view, and it moves smoothly while you drag",
+    "Unused footage gets thumbnails too, made automatically in the background and remembered, so a clip only makes them once",
+    "When the same shot is used more than once, its uses fold under the first one, marked ×2, ×3. Click to open them, or press Show all takes. You can turn this off in Filters › Group repeated shots",
+    "Filters now has Colour labels, to show or hide the coloured bar on each use",
+    "The Source Monitor button sits after the REPEAT or OTHER tag in List view, and only shows on the row you point at",
+    "The bottom bar stays on one line as you make the plugin narrower: Select all becomes its tick icon, then the slider shortens",
+    "With Follow timeline clicks on, a clip you click in the Project panel now stays on screen, rather than switching back to the clip selected on the timeline",
+    "The thumbnails for unused footage come from a sequence kept in a bin called Trace previews (Do not delete). Each one adds a \"Trace+ previews\" step to Edit › Undo the first time a clip makes them"
   ]
 }
