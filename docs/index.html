@@ -165,6 +165,10 @@
   /* ---------- pieces ---------- */
   figure{margin:22px 0}
   figure img{width:100%; border:1px solid var(--line); border-radius:10px; display:block}
+  figure.trio{display:flex; flex-wrap:wrap; justify-content:space-between}
+  figure.trio img{width:32%; margin-bottom:8px}
+  figure.trio figcaption{flex:0 0 100%}
+  @media (max-width:640px){ figure.trio img{width:100%} }
   figcaption{margin-top:8px; font-size:13.5px; color:var(--muted); text-align:center}
 
   .cards{display:flex; flex-wrap:wrap; gap:14px; margin:28px 0}
@@ -256,6 +260,7 @@
   <h4>The three views</h4>
   <a href="#views">One clip, one sequence, everything</a>
   <a href="#clip">One clip</a>
+  <a href="#clipviews">Three ways to see it</a>
   <a href="#timeline">Timeline clips</a>
   <a href="#unusedparts">The parts you never used</a>
   <a href="#sequence">One sequence</a>
@@ -324,7 +329,7 @@
   </div>
 
   <figure>
-    <img src="assets/plus-unused.gif" alt="Trace+ switched from Active cut to Project, showing 61.9 GB used and 141 GB not used, with Duplicate imports and Empty bins beside them, then the not used side pressed and the unused files listed.">
+    <img src="assets/plus-unused.gif" alt="Trace+ switched from This cut to Project, showing 61.9 GB used and 141 GB not used, with Duplicate imports and Empty bins beside them, then the not used side pressed and the unused files listed.">
     <figcaption>Press <strong>Project</strong>. Trace+ reads every bin – not just the timelines – and
       says how much of the project your cuts never use.</figcaption>
   </figure>
@@ -339,7 +344,7 @@
   <div class="note">
     <p><b>Trace+ has everything Trace has.</b> Nothing you learned in the free plugin has been taken
     away, and the gestures and the menu are the same. Trace+ adds views and actions on top, so some
-    controls sit in new places: the <strong>Active cut | Project</strong> switch on the toolbar, the
+    controls sit in new places: the <strong>This cut | Project</strong> switch on the toolbar, the
     <strong>Filters</strong> menu, and the marker button and arrows in the bar at the foot. If a
     gesture works in Trace it works here.</p>
   </div>
@@ -435,7 +440,7 @@
 
   <h2 id="quick-start">Quick start</h2>
   <ol>
-    <li>Open a project and press <strong>Project</strong> on the <strong>Active cut | Project</strong>
+    <li>Open a project and press <strong>Project</strong> on the <strong>This cut | Project</strong>
       switch at the left of the toolbar. Do not select anything.</li>
     <li>Wait for the walk. Trace+ reads every bin and every timeline, and says how far it has got.</li>
     <li>You are looking at every media file in the project. Under <strong>Project status</strong> are
@@ -448,18 +453,18 @@
 
   <h2 id="views">One clip, one sequence, everything</h2>
   <p>Trace+ has three views and you do not switch between them with a menu. <strong>What you have
-  selected decides which one you get.</strong> The one switch is <strong>Active cut | Project</strong>
-  at the left of the toolbar: <strong>Active cut</strong> is about the sequence you have open, and
+  selected decides which one you get.</strong> The one switch is <strong>This cut | Project</strong>
+  at the left of the toolbar: <strong>This cut</strong> is about the sequence you have open, and
   <strong>Project</strong> is about every media file in the project.</p>
   <table>
     <tr><th>Select this</th><th>Get this</th></tr>
-    <tr><td>Nothing, with <strong>Active cut</strong> pressed</td><td><a href="#sequence">The
+    <tr><td>Nothing, with <strong>This cut</strong> pressed</td><td><a href="#sequence">The
       sequence you have open</a> – every clip it uses</td></tr>
     <tr><td>A clip in the Project panel</td><td><a href="#clip">One clip</a> – every place it is
       used</td></tr>
     <tr><td>A sequence, or just have one open</td><td><a href="#sequence">One sequence</a> – every
       clip inside it, ranked by how often it is used</td></tr>
-    <tr><td>A clip <strong>on the timeline</strong>, with the timeline tile pressed</td>
+    <tr><td>A clip <strong>on the timeline</strong>, with <strong>Follow timeline clicks</strong> on</td>
       <td><a href="#timeline">The same answer</a> – every place that source is used, without going
       back to the Project panel</td></tr>
     <tr><td>A bin in the Project panel</td><td><a href="#bin">A whole bin</a> – what is in the cut you
@@ -468,10 +473,10 @@
       project</a> – every media file, used and unused</td></tr>
   </table>
   <p><strong>A selection always wins.</strong> Click a clip while you are in the project view and
-  the plugin follows you to that clip. With the <a href="#timeline">timeline tile</a> pressed, a clip
-  you click <em>in a sequence</em> counts as a selection too – whichever you touched last is the one
-  on screen. Project view is sticky rather than automatic: press <strong>Project</strong>
-  to go there, and it stays until you select something or press <strong>Active cut</strong>.</p>
+  the plugin follows you to that clip. With <a href="#timeline">Follow timeline clicks</a> on, a clip
+  you click <em>in a sequence</em> counts as a selection too. A clip you click in the Project panel
+  stays on screen until you click a different clip in the sequence. Project view is sticky rather than automatic: press <strong>Project</strong>
+  to go there, and it stays until you select something or press <strong>This cut</strong>.</p>
   <p><strong>Each project remembers where you were.</strong> For the rest of the session, every
   project you open keeps its own view, list, sort, hidden rows and ticked rows. Switch to another
   project and back, or close one and open it again, and it comes back as you left it. A project you
@@ -489,25 +494,67 @@
   <p>At the top are two big panes. The <strong>used</strong> pane counts the uses, with the number
   of sections and their total length under it. The <strong>never used</strong> pane shows how much
   of the source nothing points at, and how many spans that is. Press either pane to list it.</p>
+
+  <h3 id="clipviews">Three ways to see it</h3>
+  <p>The three buttons at the top right switch between Premiere's own three views:
+  <strong>List view</strong>, <strong>List with thumbnails</strong> and <strong>Icon view</strong>.
+  Each use is a frame from the middle of that use, with its timecode in the sequence, its length,
+  and its REPEAT or OTHER tag.</p>
+  <figure class="trio">
+    <img src="assets/plus-clipview-list.png" alt="Trace+ in List view: one row per use with its timecode, length and OTHER tag.">
+    <img src="assets/plus-clipview-thumbs.png" alt="Trace+ in List with thumbnails: each use has a frame beside its timecode, length and tags.">
+    <img src="assets/plus-clipview-icons.png" alt="Trace+ in Icon view: each use is a large frame with its timecode and length under it.">
+    <figcaption>List view, List with thumbnails and Icon view. The slider in the bottom bar sizes
+      whichever one you are in.</figcaption>
+  </figure>
+  <ul>
+    <li><strong>The slider in the bottom bar</strong> makes the frames bigger or smaller, or the text
+      in List view. It moves smoothly while you drag, and each view remembers its own size. In Icon
+      view the frames always fill the row, as they do in Premiere.</li>
+    <li><strong>A frame is what the sequence shows at that moment</strong>, not the clip on its own.
+      If a title or another clip sits above the use, that is what you see, and a use that sits under
+      something black shows black. The frames are made one at a time in the background, starting at
+      the top, so a clip with a hundred uses takes a moment to fill in.</li>
+    <li><strong>The same shot used more than once folds under its first use</strong>, marked
+      ×2, ×3 in the corner of the frame or at the end of the row. Click it to open the others, or press
+      <strong>Show all takes</strong> beside the sequence name to open every one. To list every use on
+      its own, turn off <strong>Filters ▸ Group repeated shots</strong>.</li>
+    <li><strong>The Source Monitor button</strong> appears after the tag on the row you point at in List
+      view, and in the corner of the frame in the other two.</li>
+    <li><strong>Filters ▸ Colour labels</strong> shows or hides the coloured bar on each use. Uses of
+      the same part of the clip share a colour.</li>
+  </ul>
+  <p>As you make the plugin narrower, the bottom bar stays on one line for as long as it can:
+  <strong>Select all</strong> becomes its tick icon, then the slider gets shorter, and only then does
+  it go.</p>
   <p>Under them, <strong>All cuts · Active only · Hide old</strong> decides which sequences the uses
   come from. <strong>Active only</strong> is on by default and shows just the sequence you have open.
   <strong>All cuts</strong> shows every sequence the clip is in, and <strong>Hide old</strong> shows
   every sequence except the ones that look archived or superseded. See
   <a href="#activeonly">Only the cut you have open</a>.</p>
-  <p>The <strong>source coverage bar</strong> draws the whole clip as a strip with the parts you have
-  used filled in, and tells you the longest stretch you have never touched. On a forty-minute
-  interview that is the difference between "I used this clip" and "I used ninety seconds of it, all
-  from the first six minutes".</p>
-  <figure>
-    <img src="assets/plus-coverage.gif" alt="A long interview clip in Trace+, with the used and never used panes, All cuts, Active only and Hide old under them, and the source coverage bar filling in as each use is drawn onto the strip.">
-    <figcaption>The <strong>source coverage bar</strong> – which parts of the source are on a
-      timeline, and the longest run that never made it.</figcaption>
-  </figure>
   <p>Above the list, <strong>All · Repeat · Other · Retimed · Unused</strong> narrows what you are
   looking at. The first four are about the <em>uses</em> – see <a href="#repeats">Repeats and
   sections</a> and <a href="#retimed">Retimed uses</a>. The last is the other side of the coin.</p>
 
   <h3 id="unusedparts">The parts you never used</h3>
+  <figure>
+    <img src="assets/plus-clipview-unused.png" alt="Trace+ showing a clip's unused footage in Icon view: a frame from each unused span, with where it starts and how long it is.">
+    <figcaption>Unused footage gets a picture too, from the middle of each span.</figcaption>
+  </figure>
+  <p><b>The unused spans have thumbnails as well</b>, in List with thumbnails and Icon view.
+  Premiere only gives a plugin frames of a sequence, never of a clip on its own, so Trace+ keeps one
+  sequence of its own for this, named <code>_Trace previews</code>, in a bin called
+  <strong>Trace previews (Do not delete)</strong>. It drops the clip in, takes a frame from the
+  middle of each span, and lifts it out again, without opening anything. The frames are saved, so a
+  clip only does this the first time, or when an edit opens up a span no saved frame falls inside.</p>
+  <ul>
+    <li><strong>It shows in Edit ▸ Undo.</strong> Every change Premiere makes to a sequence is an undo
+      step, and a plugin has no way round that. The first time a clip makes its previews you will see
+      two or three <strong>Trace+ previews</strong> steps there. Undoing one does no harm, and the
+      previews are not affected.</li>
+    <li><strong>Leave the bin alone.</strong> Delete it and Trace+ makes it again the next time it
+      needs it. Its sequence is never counted as a use of anything.</li>
+  </ul>
   <p><strong>Unused</strong> lists the spans of the source that nothing points at – the gaps
   <em>between</em> the uses. Where each one starts, how long it is, and what share of the file it is.
   On a forty-minute interview that is usually most of it. Click a span to open the clip in the
@@ -530,7 +577,7 @@
   3 undo steps (the subclips, filing them, the sequence), plus one for each bin it has to make: 2 the
   very first time, 1 for a clip it has not built from before. It never touches the file.</p>
   <p><b>Cut one of those subclips into your edit and its span stops being never used.</b> The
-  coverage bar, the never-used spans and the totals count every use of the clip's own subclips and of
+  never-used spans and the totals count every use of the clip's own subclips and of
   any other import of the same file – except a use inside a <code>_STRINGOUTS</code> sequence, so
   building the spans sequence never closes the spans it shows you. With
   <strong>Settings ▸ Put used clips back automatically</strong> on, that subclip also moves out of
@@ -558,18 +605,17 @@
   <h2 id="timeline">Clips you select in the timeline</h2>
   <p><b>The question this answers is the one you ask mid-edit.</b> You are watching a cut, something
   looks familiar, and you want to know where else it is – without stopping, finding the clip in the
-  Project panel, and clicking it there. Press <strong>Timeline</strong> and the sequence asks for you.</p>
-  <p>By default Trace+ answers about whatever you click in the <strong>Project panel</strong>. Press
-  the <strong>Timeline</strong> icon in the toolbar – the switch just left of <strong>Filters</strong>, which lights
-  purple while it is on – and it answers about
-  clips you click <strong>in a sequence</strong> as well. Not instead: both keep working, and whichever you
-  touched last is the one on screen.</p>
+  Project panel, and clicking it there. Turn on <strong>Follow timeline clicks</strong> and the sequence asks for you.</p>
+  <p>By default Trace+ answers about whatever you click in the <strong>Project panel</strong>. Turn on
+  <strong>Filters ▸ Follow timeline clicks</strong> and it answers about clips you click
+  <strong>in a sequence</strong> as well. Not instead: both keep working. A clip you click in the Project
+  panel stays on screen while a clip is still selected in the sequence, and the next clip you click
+  in the sequence takes over again.</p>
   <p>It is off until you press it, it remembers the setting, and pressing it reads whatever is
   selected on the timeline right away rather than waiting for your next click.</p>
   <figure>
     <img src="assets/plus-timeline.gif" alt="The Timeline icon just left of Filters in Trace+'s toolbar being pressed until it lights purple, then a clip clicked on the V1 track of a sequence, and the plugin switching from the clip that was selected in the Project panel to the one selected in the timeline.">
-    <figcaption>Press Timeline once, then click in the sequence. The Project panel keeps working –
-      <strong>whichever you touched last wins</strong>.</figcaption>
+    <figcaption>Turn it on once, then click in the sequence. The Project panel keeps working.</figcaption>
   </figure>
   <ul>
     <li><strong>Select one clip in any sequence</strong> and the plugin shows every other place that source
@@ -583,8 +629,7 @@
     <p><b>It stands down in the project view.</b> It goes grey while you are looking at
     <a href="#project">the whole project</a>, because a timeline clip is a question about one clip and
     that view is about all of them – acting on it would have to throw you out of the view you chose.
-    Switch to <strong>Active cut</strong> first and it lights again.</p>
-    <p>On a narrow dock the word goes and the icon stays, the same way <strong>Filters</strong> behaves.</p>
+    Switch to <strong>This cut</strong> first and it lights again.</p>
   </div>
   <div class="note">
     <p><b>On a very large project there can be a pause.</b> Trace+ answers from its index, and on a
@@ -656,7 +701,7 @@
   </div>
 
   <h2 id="project">The whole project</h2>
-  <p>Press <strong>Project</strong> on the <strong>Active cut | Project</strong> switch, with nothing
+  <p>Press <strong>Project</strong> on the <strong>This cut | Project</strong> switch, with nothing
   selected. Trace+ walks every bin, measures every media file, and gives you the lot.</p>
   <p>Under <strong>Project status</strong> are two big totals: <strong>used</strong> and
   <strong>not used</strong>, each in GBs, with the file count and length under it. Press one to list
@@ -926,7 +971,7 @@
   struck-out pin that turns purple when you point at it; a pinned one shows a grey pin that turns
   into a yellow struck-out pin. The colour you see on hover is what the press will do.
   <strong>Search</strong> pins the same way, with the pin beside its heading: pinned, the search box
-  sits above the list in the Project view, the Active cut view and a bin.</p>
+  sits above the list in the Project view, the This cut view and a bin.</p>
 
   <p><strong>Used</strong> and <strong>not used</strong> are not filters: they are the two totals
   under Project status, and you press one to choose the list. <strong>Duplicate imports</strong>,
@@ -1102,7 +1147,7 @@
   <ul>
     <li>It is the check before a delivery or a re-conform: every slowed, sped-up, reversed or held
       use of a clip, across every cut, in one list.</li>
-    <li>In the <strong>Active cut</strong> view each clip's row carries the tag too: the speed when
+    <li>In the <strong>This cut</strong> view each clip's row carries the tag too: the speed when
       every use of it plays at that speed, or <strong>1 at 50%</strong> when only some do. The
       <strong>Retimed</strong> filter there lists only those clips. On a narrow dock the tag becomes
       a small amber gauge in its own column, so the rows still line up; point at it for the
@@ -1339,7 +1384,7 @@
 
   <h2 id="copy">Copying and exporting</h2>
   <p><strong>☰ &gt; Copy list</strong> puts what is on screen on the clipboard as plain text –
-  in the clip view or the Active cut view, filters and all. It is what the list is showing, not what it could show,
+  in the clip view or the This cut view, filters and all. It is what the list is showing, not what it could show,
   so a filtered list copies filtered.</p>
   <p><strong>☰ &gt; Export CSV</strong> is the other half of that: a file a spreadsheet opens without
   anybody repairing it first. Same rule – it exports what is on screen – and <strong>what you get
@@ -1369,15 +1414,15 @@
   <table>
     <tr><th>Clean</th><td>Name, count and times. Tighter rows, and everything you could have got
       by clicking is gone. For a narrow dock down the side of the screen.</td></tr>
-    <tr><th>Detailed</th><td>Everything: the bin path, the coverage bar, durations and tracks, the
+    <tr><th>Detailed</th><td>Everything: the bin path, durations and tracks, the
       source in and out of every use, the nest it came through, and the media's path on disk.</td></tr>
   </table>
   <p>Set it to Clean on a narrow dock and Detailed when you are actually investigating something.
   It is one press either way.</p>
   <div class="note">
-    <p><b>Neither level hides the status line.</b> The strip along the bottom – what is being
-    scanned right now, and the confirmation after anything is moved, marked or labelled – is there at
-    both levels. It stays quiet until something happens; how long a scan took is in
+    <p><b>Neither level hides the status line.</b> What is being scanned right now, and the
+    confirmation after anything is moved, marked or labelled, appears just above the bottom bar for a
+    few seconds at both levels, and a warning stays until it clears. How long a scan took is in
     <strong>☰ &gt; Scan report</strong>. Detail is about how much each
     <em>row</em> says, not about how much the plugin tells you.</p>
     <p>The one thing that does hide it is docking the plugin very short, where there is no room for a
@@ -1394,7 +1439,7 @@
   tooltip over the control you are trying to read. The <strong>Panel</strong> tab shows a clip row
   and one of its uses as they will look in the list, and it changes as you change the settings
   above it.</p>
-  <p><b>Text size is not in Settings.</b> It is a slider at the right-hand end of the status strip along the bottom of the plugin –
+  <p><b>Text size is not in Settings.</b> It is a slider at the foot of the <strong>Filters</strong> menu –
   <code>Aa</code> at each end, four steps. Click anywhere on the rail, or focus it and use the arrow
   keys; the list holds its place while the size changes, so you do not lose where you were. A plugin
   docked down the side of a 4K display draws 11px labels at about five millimetres, and this one is
@@ -1484,7 +1529,7 @@
   and <kbd>Alt</kbd>-click copies the clip's name for the Project panel's Find box.
   <strong>Settings ▸ Panel ▸ Display ▸ Hover tips</strong> turns the tips off.</p>
   <p><strong>Sorting.</strong> The <strong>Name</strong>, <strong>Type</strong> and <strong>Uses</strong>
-  headings over the Active cut and Project lists sort by that column; click the same heading again to
+  headings over the This cut and Project lists sort by that column; click the same heading again to
   reverse it. The arrow shows which one is in use, and each list remembers its sort next time.
   Duplicate imports sorts the same way, with <strong>Spare</strong> in place of Uses.</p>
   <p><strong>Getting back.</strong> Click a row and Trace+ jumps to the sequence that uses it most.
@@ -1510,7 +1555,7 @@
       a lighter grey; press it again to untick them. A bar in it means some of its uses are ticked,
       not all</td></tr>
     <tr><td>The tick box in a heading</td><td>Ticks everything that list shows – the whole cut in
-      the Active cut view, one sequence's uses under a sequence heading. <kbd>Cmd</kbd> /
+      the This cut view, one sequence's uses under a sequence heading. <kbd>Cmd</kbd> /
       <kbd>Ctrl</kbd>-click a sequence heading's box to add its uses to what is already ticked</td></tr>
     <tr><td><strong>Select all</strong>, in the bar at the foot</td><td>In the clip view, ticks every use
       of the clip in every sequence on screen at once, folded sequences included. It says how many
@@ -1559,7 +1604,7 @@
   <p><strong>☰ &gt; Help &amp; licence…</strong> shows the version you are running – the first thing to
   quote if you report a problem – along with your licence and a link back to this site.</p>
   <p><strong>☰ &gt; Tour</strong> plays the tour for the view you are in. There are 2: one for the
-  Active cut, which runs the first time you open the plugin, and one for the Project view, which runs
+  This cut, which runs the first time you open the plugin, and one for the Project view, which runs
   the first time you open that. Docked too narrow for the tour, the plugin shows <em>New here? Open
   ☰ for the Tour</em> instead: press it to dismiss it, and widen the dock before you choose
   <strong>☰ &gt; Tour</strong>.</p>
