@@ -1,14 +1,9 @@
 {
-  "latest": "1.12.0",
-  "released": "2026-11-17",
-  "headline": "Project view gets thumbnails, List view and Icon view too.",
+  "latest": "1.12.1",
+  "released": "2026-11-23",
+  "headline": "Unused footage thumbnails fill their frame.",
   "url": "https://nkcourses.github.io/traceplus-updates/#history",
   "notes": [
-    "Project view now has the same three views as a clip: List, List with thumbnails, and Icon view. Every file gets a frame, from its first use if it is in your edit, or made in the background if it is not",
-    "Offline files show Premiere's own red Media Offline card instead of an empty frame",
-    "Thumbnails come faster: the rows on screen go first, three are made at once, and every frame is kept on disk, so a clip you open again shows its pictures straight away",
-    "In This cut the three view buttons and the size slider are greyed out, as they only work on a clip's uses and in Project view",
-    "A long bin path under a name in Project view now stops before the Type column, and a path more than three bins deep shows only its last three. Point at it to read the whole path",
-    "The count between the arrows in the bottom bar is centred"
+    "A thumbnail of unused footage no longer sits small in a black frame when the clip is smaller than the first one Trace+ made previews from. Frames already made are fixed too, with nothing to remake"
   ]
 }
